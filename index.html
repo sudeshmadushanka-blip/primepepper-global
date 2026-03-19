@@ -11,7 +11,7 @@
         header { background: #1e3e2b; color: white; padding: 1.5rem 0; box-shadow: 0 4px 12px rgba(0,30,0,0.1); }
         header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         .logo-area { display: flex; align-items: center; gap: 1rem; }
-        .logo-symbol { background: #e9c46a; color: #1e3e2b; font-weight: 800; font-size: 1.8rem; width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+        .logo-area img { height: 60px; width: auto; }
         .logo-text { line-height: 1.2; }
         .logo-text h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: 0.5px; }
         .logo-text p { font-size: 0.9rem; color: #cfead7; }
@@ -38,8 +38,13 @@
         .contact-info { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; }
         .contact-card { background: rgba(255,255,255,0.06); padding: 1.8rem; border-radius: 20px; flex: 1 1 240px; }
         .contact-card h4 { color: #f7d98c; margin-bottom: 1rem; font-size: 1.3rem; }
+        .contact-card a { color: #e9c46a; text-decoration: none; }
+        .contact-card a:hover { text-decoration: underline; }
         .founder-box { background: #2c4b34; border-radius: 28px; padding: 2rem; margin: 2rem 0; border-left: 6px solid #e9c46a; }
+        .mission-box { background: #f2f9ee; border-radius: 24px; padding: 2rem; margin: 2rem 0; border-left: 6px solid #e9c46a; }
+        .mission-box p { font-size: 1.2rem; font-style: italic; color: #1e4d2e; }
         footer { background: #1b2d22; color: #afc9b2; text-align: center; padding: 2rem; margin-top: 3rem; border-radius: 40px 40px 0 0; }
+        footer a { color: #e9c46a; text-decoration: none; }
         @media (max-width: 700px) { .product-grid { grid-template-columns: 1fr; } .usp-list { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -47,7 +52,8 @@
     <header>
         <div class="container">
             <div class="logo-area">
-                <div class="logo-symbol">PPG</div>
+                <!-- ලාංඡනය: logo.png කියලා upload කරලා තියෙනවා නම් මේක හරි -->
+                <img src="logo.png" alt="PrimePepper Global Logo">
                 <div class="logo-text">
                     <h1>PrimePepper Global</h1>
                     <p>(Pvt) Ltd · Sri Lanka</p>
@@ -123,6 +129,13 @@
             <p>19+ years HR & administrative experience · Deep knowledge of UAE & Middle East markets</p>
             <p style="margin-top: 0.8rem;">🇱🇰 VTA Certified Entrepreneur (2003, Nuwara Eliya)<br>🍽️ NVQ Level 3 – Food & Beverage Service (2023)<br>🗣️ Sinhala · English · Tamil</p>
         </div>
+
+        <!-- Mission Statement -->
+        <div class="mission-box">
+            <h3 style="color: #1e4d2e; margin-bottom: 1rem;">🎯 Our Mission</h3>
+            <p>"To produce and export 100% organic, steam-distilled pepper essential oil of uncompromising quality, bridging Sri Lanka's spice heritage with global wellness markets through integrity and partnership."</p>
+            <p style="margin-top: 1rem; font-style: normal;"><strong>Our Commitment:</strong> At PrimePepper Global, we harness the power of steam distillation to extract the purest black pepper essential oil. Our organic peppercorns are meticulously sourced from local Sri Lankan farmers, ensuring a product free from chemicals and full of natural potency.</p>
+        </div>
     </div>
 
     <div class="container" id="contact">
@@ -135,15 +148,17 @@
                 </div>
                 <div class="contact-card">
                     <h4>📞 Phone / WhatsApp</h4>
-                    <p><strong>UAE:</strong> +971 56 884 0769<br><strong>Sri Lanka:</strong> +94 XX XXX XXXX</p>
+                    <p><strong>UAE:</strong> <a href="https://wa.me/971568840769" target="_blank">+971 56 884 0769</a><br>
+                    <strong>Sri Lanka:</strong> +94 XX XXX XXXX</p>
                 </div>
                 <div class="contact-card">
                     <h4>📧 Email</h4>
-                    <p>sudheshmadushanka@gmail.com</p>
+                    <p><a href="mailto:sudheshmadushanka@gmail.com">sudheshmadushanka@gmail.com</a></p>
                 </div>
                 <div class="contact-card">
                     <h4>🔗 Online</h4>
-                    <p>LinkedIn: /in/sudesh-madushanka<br>Portfolio: sudeshmadushanka-blip.github.io</p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/sudesh-madushanka" target="_blank">/in/sudesh-madushanka</a><br>
+                    Portfolio: <a href="https://sudeshmadushanka-blip.github.io/portfolio-website-/" target="_blank">sudeshmadushanka-blip.github.io</a></p>
                 </div>
             </div>
             <p style="text-align: center; margin-top: 2.5rem; font-size: 1.2rem;">Sri Lanka's Finest Organic Pepper Essential Oil</p>
@@ -153,8 +168,8 @@
     <footer>
         <div class="container">
             <p>© 2026 PrimePepper Global (Pvt) Ltd · All rights reserved · Pure · Organic · Premium</p>
-            <p style="margin-top: 0.8rem;">✉️ <a href="mailto:sudheshmadushanka@gmail.com" style="color: #e9c46a;">sudheshmadushanka@gmail.com</a> | 📞 +971 56 884 0769</p>
+            <p style="margin-top: 0.8rem;">✉️ <a href="mailto:sudheshmadushanka@gmail.com">sudheshmadushanka@gmail.com</a> | 📞 <a href="https://wa.me/971568840769" target="_blank">+971 56 884 0769</a></p>
         </div>
     </footer>
 </body>
-</html>
+    </html>
