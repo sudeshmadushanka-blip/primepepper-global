@@ -28,19 +28,23 @@
         .product-specs { background: #f4faf2; padding: 2rem; border-radius: 20px; }
         .spec-item { display: flex; padding: 0.7rem 0; border-bottom: 1px dashed #cbd9c3; }
         .spec-label { width: 40%; font-weight: 600; color: #2f5438; }
-        .spec-value { width: 60%; color: #1d331d; }
-        .usp-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin: 2rem 0; }
-        .usp-item { background: #eef5ea; padding: 1rem 1.2rem; border-radius: 40px; font-size: 1rem; font-weight: 500; color: #1f482a; }
+        .spec-value { width: 60%; color: #1d331d; } 
+                .usp-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin: 2rem 0; }
+        .usp-item { background: #eef5ea; padding: 1rem 1.2rem; border-radius: 40px; font-size: 1rem; font-weight: 500; color: #1f482a; text-align: center; }
         .price-table { width: 100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,20,0,0.05); }
         .price-table th { background: #2a5f3a; color: white; padding: 1rem; text-align: left; }
         .price-table td { padding: 1rem; border-bottom: 1px solid #e3eedb; }
+        .founder-box { background: #2c4b34; border-radius: 28px; padding: 2rem; margin: 2rem 0; border-left: 6px solid #e9c46a; color: white; }
+        .founder-box h3 { color: #f7d98c; font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .founder-box p { color: #e0eedb; }
+        .founder-box .badge-list { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+        .founder-box .badge { background: #3f6a4a; color: white; padding: 0.5rem 1.2rem; border-radius: 40px; font-size: 0.9rem; }
         .contact-section { background: #1e3e2b; color: white; border-radius: 32px; padding: 2.5rem; margin-top: 3rem; }
         .contact-info { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; }
         .contact-card { background: rgba(255,255,255,0.06); padding: 1.8rem; border-radius: 20px; flex: 1 1 240px; }
         .contact-card h4 { color: #f7d98c; margin-bottom: 1rem; font-size: 1.3rem; }
-        .contact-card a { color: #e9c46a; text-decoration: none; }
+        .contact-card a { color: #e9c46a; text-decoration: none; word-break: break-all; }
         .contact-card a:hover { text-decoration: underline; }
-        .founder-box { background: #2c4b34; border-radius: 28px; padding: 2rem; margin: 2rem 0; border-left: 6px solid #e9c46a; }
         .mission-box { background: #f2f9ee; border-radius: 24px; padding: 2rem; margin: 2rem 0; border-left: 6px solid #e9c46a; }
         .mission-box p { font-size: 1.2rem; font-style: italic; color: #1e4d2e; }
         footer { background: #1b2d22; color: #afc9b2; text-align: center; padding: 2rem; margin-top: 3rem; border-radius: 40px 40px 0 0; }
@@ -52,7 +56,7 @@
     <header>
         <div class="container">
             <div class="logo-area">
-                <!-- ලාංඡනය: logo.png කියලා upload කරලා තියෙනවා නම් මේක හරි -->
+                <!-- ලාංඡනය: මෙම නමට ඔබගේ ලාංඡන ගොනුවේ නම දෙන්න (logo.png හෝ file_00000000bd14720a979036325e7fa470.png) -->
                 <img src="logo.png" alt="PrimePepper Global Logo">
                 <div class="logo-text">
                     <h1>PrimePepper Global</h1>
@@ -85,8 +89,8 @@
                 <div class="spec-item"><span class="spec-label">Botanical name</span><span class="spec-value">Piper nigrum</span></div>
                 <div class="spec-item"><span class="spec-label">Extraction</span><span class="spec-value">Steam distillation</span></div>
                 <div class="spec-item"><span class="spec-label">Plant part</span><span class="spec-value">Dried peppercorns</span></div>
-                <div class="spec-item"><span class="spec-label">Origin</span><span class="spec-value">Sri Lanka (Ceylon)</span></div>
-                <div class="spec-item"><span class="spec-label">Appearance</span><span class="spec-value">Clear, pale yellow to light green</span></div>
+                <div class="spec-item"><span class="spec-label">Origin</span><span class="spec-value">Sri Lanka (Ceylon)</span></div> 
+                                <div class="spec-item"><span class="spec-label">Appearance</span><span class="spec-value">Clear, pale yellow to light green</span></div>
                 <div class="spec-item"><span class="spec-label">Aroma</span><span class="spec-value">Warm, spicy, woody, fresh</span></div>
                 <div class="spec-item"><span class="spec-label">Density (20°C)</span><span class="spec-value">0.864 – 0.884</span></div>
                 <div class="spec-item"><span class="spec-label">Refractive index</span><span class="spec-value">1.479 – 1.490</span></div>
@@ -125,9 +129,13 @@
     <div class="container" id="about">
         <h2 class="section-title">👤 Founder</h2>
         <div class="founder-box">
-            <h3 style="color: #f7d98c;">S.M. Sudesh Madushanka</h3>
-            <p>19+ years HR & administrative experience · Deep knowledge of UAE & Middle East markets</p>
-            <p style="margin-top: 0.8rem;">🇱🇰 VTA Certified Entrepreneur (2003, Nuwara Eliya)<br>🍽️ NVQ Level 3 – Food & Beverage Service (2023)<br>🗣️ Sinhala · English · Tamil</p>
+            <h3>S.M. Sudesh Madushanka</h3>
+            <p style="font-size: 1.1rem;">19+ years HR & administrative experience · Deep knowledge of UAE & Middle East markets</p>
+            <div class="badge-list">
+                <span class="badge">🇱🇰 VTA Certified Entrepreneur (2003)</span>
+                <span class="badge">🍽️ NVQ Level 3 – F&B Service (2023)</span>
+                <span class="badge">🗣️ Sinhala · English · Tamil</span>
+            </div>
         </div>
 
         <!-- Mission Statement -->
@@ -149,7 +157,7 @@
                 <div class="contact-card">
                     <h4>📞 Phone / WhatsApp</h4>
                     <p><strong>UAE:</strong> <a href="https://wa.me/971568840769" target="_blank">+971 56 884 0769</a><br>
-                    <strong>Sri Lanka:</strong> +94 XX XXX XXXX</p>
+                    <strong>Sri Lanka:</strong> <a href="https://wa.me/94762015894" target="_blank">+94 76 201 5894</a></p>
                 </div>
                 <div class="contact-card">
                     <h4>📧 Email</h4>
@@ -168,8 +176,8 @@
     <footer>
         <div class="container">
             <p>© 2026 PrimePepper Global (Pvt) Ltd · All rights reserved · Pure · Organic · Premium</p>
-            <p style="margin-top: 0.8rem;">✉️ <a href="mailto:sudheshmadushanka@gmail.com">sudheshmadushanka@gmail.com</a> | 📞 <a href="https://wa.me/971568840769" target="_blank">+971 56 884 0769</a></p>
+            <p style="margin-top: 0.8rem;">✉️ <a href="mailto:sudheshmadushanka@gmail.com">sudheshmadushanka@gmail.com</a> | 📞 <a href="https://wa.me/971568840769" target="_blank">UAE +971 56 884 0769</a> | 📞 <a href="https://wa.me/94762015894" target="_blank">SL +94 76 201 5894</a></p>
         </div>
     </footer>
 </body>
-    </html>
+</html> 
