@@ -3,60 +3,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimePepper Global · Organic Sri Lankan Pepper Essential Oil</title>
+    <title>PrimePepper Global | Organic Sri Lankan Pepper Essential Oil</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; background: #f9faf7; color: #1e2f23; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
-        header { background: #1e3e2b; color: white; padding: 1.5rem 0; box-shadow: 0 4px 12px rgba(0,30,0,0.1); }
-        header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo-area { display: flex; align-items: center; gap: 1rem; }
-        .logo-area img { height: 60px; width: auto; }
-        .logo-text { line-height: 1.2; }
-        .logo-text h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: 0.5px; }
-        .logo-text p { font-size: 0.9rem; color: #cfead7; }
-        nav a { color: #f0f7e6; margin-left: 2rem; text-decoration: none; font-weight: 500; transition: color 0.2s; }
-        nav a:hover { color: #f4d793; }
-        .hero { background: linear-gradient(145deg, #f5f9f0 0%, #e4f0dc 100%); border-bottom: 3px solid #b8d9b0; text-align: center; padding: 3rem 0; }
-        .hero h2 { font-size: 2.6rem; color: #1e4d2e; max-width: 800px; margin: 0 auto 1rem; line-height: 1.2; }
-        .hero .badge { background: #2a5f3a; color: white; display: inline-block; padding: 0.4rem 1.2rem; border-radius: 40px; font-size: 1rem; letter-spacing: 1px; margin-bottom: 1.5rem; }
-        .hero p { font-size: 1.3rem; color: #2a482a; max-width: 700px; margin: 1.5rem auto; }
-        .btn { display: inline-block; background: #1e4d2e; color: white; padding: 0.9rem 2.2rem; border-radius: 40px; text-decoration: none; font-weight: 600; font-size: 1.2rem; transition: all 0.2s; border: none; cursor: pointer; box-shadow: 0 4px 8px rgba(0,60,0,0.2); }
-        .btn:hover { background: #2e6e3e; transform: scale(1.02); }
-        .section-title { font-size: 2.2rem; color: #1e3e2b; border-left: 8px solid #e9c46a; padding-left: 1.2rem; margin: 2.5rem 0 2rem; }
-        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; background: white; border-radius: 24px; padding: 2rem; box-shadow: 0 8px 24px rgba(0,32,0,0.06); }
-        .product-specs { background: #f4faf2; padding: 2rem; border-radius: 20px; }
-        .spec-item { display: flex; padding: 0.7rem 0; border-bottom: 1px dashed #cbd9c3; }
-        .spec-label { width: 40%; font-weight: 600; color: #2f5438; }
-        .spec-value { width: 60%; color: #1d331d; } 
-                .usp-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 1rem; margin: 2rem 0; }
-        .usp-item { background: #eef5ea; padding: 1rem 1.2rem; border-radius: 40px; font-size: 1rem; font-weight: 500; color: #1f482a; text-align: center; }
-        .price-table { width: 100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,20,0,0.05); }
-        .price-table th { background: #2a5f3a; color: white; padding: 1rem; text-align: left; }
-        .price-table td { padding: 1rem; border-bottom: 1px solid #e3eedb; }
-        .founder-box { background: #2c4b34; border-radius: 28px; padding: 2rem; margin: 2rem 0; border-left: 6px solid #e9c46a; color: white; }
-        .founder-box h3 { color: #f7d98c; font-size: 1.8rem; margin-bottom: 0.5rem; }
-        .founder-box p { color: #e0eedb; }
-        .founder-box .badge-list { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
-        .founder-box .badge { background: #3f6a4a; color: white; padding: 0.5rem 1.2rem; border-radius: 40px; font-size: 0.9rem; }
-        .contact-section { background: #1e3e2b; color: white; border-radius: 32px; padding: 2.5rem; margin-top: 3rem; }
-        .contact-info { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; }
-        .contact-card { background: rgba(255,255,255,0.06); padding: 1.8rem; border-radius: 20px; flex: 1 1 240px; }
-        .contact-card h4 { color: #f7d98c; margin-bottom: 1rem; font-size: 1.3rem; }
-        .contact-card a { color: #e9c46a; text-decoration: none; word-break: break-all; }
-        .contact-card a:hover { text-decoration: underline; }
-        .mission-box { background: #f2f9ee; border-radius: 24px; padding: 2rem; margin: 2rem 0; border-left: 6px solid #e9c46a; }
-        .mission-box p { font-size: 1.2rem; font-style: italic; color: #1e4d2e; }
-        footer { background: #1b2d22; color: #afc9b2; text-align: center; padding: 2rem; margin-top: 3rem; border-radius: 40px 40px 0 0; }
-        footer a { color: #e9c46a; text-decoration: none; }
-        @media (max-width: 700px) { .product-grid { grid-template-columns: 1fr; } .usp-list { grid-template-columns: 1fr; } }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8faf8;
+            color: #1e2f23;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #0a3b2e 0%, #1a5342 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0,40,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-area img {
+            height: 60px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        
+        .logo-text h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .logo-text p {
+            font-size: 0.9rem;
+            color: #cfead7;
+            letter-spacing: 2px;
+        }
+        
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #e9c46a;
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover:after {
+            width: 100%;
+        }
+        
+        nav a:hover {
+            color: #e9c46a;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 59, 46, 0.85), rgba(26, 83, 66, 0.9)), url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero .badge {
+            background: #e9c46a;
+            color: #0a3b2e;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 20px auto;
+            opacity: 0.95;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #e9c46a;
+            color: #0a3b2e;
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 2px solid #e9c46a;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #e9c46a;
+            transform: translateY(-3px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #e9c46a;
+            color: #e9c46a;
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background: #e9c46a;
+            color: #0a3b2e;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #0a3b2e;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: #e9c46a;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: #5a6e5f;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+        
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0,20,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,40,0,0.15);
+        }
+        
+        .product-card h3 {
+            color: #0a3b2e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .spec-item {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px dashed #d9e2d4;
+        }
+        
+        .spec-label {
+            width: 40%;
+            font-weight: 600;
+            color: #2f5438;
+        }
+        
+        .spec-value {
+            width: 60%;
+            color: #1d331d;
+        }
+        
+        .usp-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .usp-item {
+            background: #ecf3e8;
+            padding: 12px 15px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #0a3b2e;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,20,0,0.05);
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,20,0,0.08);
+            margin: 40px 0;
+        }
+        
+        .price-table th {
+            background: #0a3b2e;
+            color: white;
+            padding: 18px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .price-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e3eedb;
+            font-size: 1.1rem;
+        }
+        
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .trade-terms {
+            background: #ecf3e8;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            border-left: 6px solid #e9c46a;
+        }
+        
+        .trade-terms h4 {
+            color: #0a3b2e;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Founder Box */
+        .founder-box {
+            background: linear-gradient(135deg, #0a3b2e 0%, #1a5342 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 15px 40px rgba(0,40,0,0.3);
+        }
+        
+        .founder-box h3 {
+            color: #e9c46a;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .badge {
+            background: rgba(233, 196, 106, 0.15);
+            border: 1px solid #e9c46a;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+        }
+        
+        .mission-box {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,20,0,0.08);
+            border-left: 6px solid #e9c46a;
+        }
+        
+        .mission-box p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #1e2f23;
+            line-height: 1.8;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #0a3b2e 0%, #1a5342 100%);
+            color: white;
+            border-radius: 30px;
+            padding: 60px;
+            margin-top: 60px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .contact-card h4 {
+            color: #e9c46a;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-card a:hover {
+            color: #e9c46a;
+        }
+        
+        .contact-card i {
+            margin-right: 8px;
+            color: #e9c46a;
+        }
+        
+        footer {
+            background: #0a2f23;
+            color: #afc9b2;
+            text-align: center;
+            padding: 30px;
+            margin-top: 80px;
+            border-radius: 30px 30px 0 0;
+        }
+        
+        footer a {
+            color: #e9c46a;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 900px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav {
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .usp-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-content">
             <div class="logo-area">
-                <!-- ලාංඡනය: මෙම නමට ඔබගේ ලාංඡන ගොනුවේ නම දෙන්න (logo.png හෝ file_00000000bd14720a979036325e7fa470.png) -->
+                <!-- Upload your logo file as "logo.png" in GitHub repository -->
                 <img src="logo.png" alt="PrimePepper Global Logo">
                 <div class="logo-text">
                     <h1>PrimePepper Global</h1>
@@ -64,7 +485,7 @@
                 </div>
             </div>
             <nav>
-                <a href="#">Home</a>
+                <a href="#home">Home</a>
                 <a href="#product">Product</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
@@ -72,112 +493,140 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="container">
             <span class="badge">100% Organic · Steam Distilled</span>
-            <h2>Pure Black Pepper Essential Oil from the Heart of Sri Lanka</h2>
-            <p>Warm, spicy, woody · Piper nigrum · Premium Ceylon quality</p>
-            <a href="#product" class="btn">Explore Our Oil</a>
+            <h2>Pure Black Pepper Essential Oil<br>from the Heart of Sri Lanka</h2>
+            <p>Warm, spicy, woody · Piper nigrum · Premium Ceylon Quality</p>
+            <div>
+                <a href="#product" class="btn">Explore Our Oil <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+            </div>
         </div>
     </section>
 
-    <div class="container" id="product">
-        <h2 class="section-title">🌿 Organic Black Pepper Essential Oil</h2>
-        <div class="product-grid">
-            <div class="product-specs">
-                <h3 style="color:#1e4d2e; margin-bottom: 1.5rem;">Product details</h3>
-                <div class="spec-item"><span class="spec-label">Botanical name</span><span class="spec-value">Piper nigrum</span></div>
-                <div class="spec-item"><span class="spec-label">Extraction</span><span class="spec-value">Steam distillation</span></div>
-                <div class="spec-item"><span class="spec-label">Plant part</span><span class="spec-value">Dried peppercorns</span></div>
-                <div class="spec-item"><span class="spec-label">Origin</span><span class="spec-value">Sri Lanka (Ceylon)</span></div> 
-                                <div class="spec-item"><span class="spec-label">Appearance</span><span class="spec-value">Clear, pale yellow to light green</span></div>
-                <div class="spec-item"><span class="spec-label">Aroma</span><span class="spec-value">Warm, spicy, woody, fresh</span></div>
-                <div class="spec-item"><span class="spec-label">Density (20°C)</span><span class="spec-value">0.864 – 0.884</span></div>
-                <div class="spec-item"><span class="spec-label">Refractive index</span><span class="spec-value">1.479 – 1.490</span></div>
-            </div>
-            <div style="background: #eaf2e5; border-radius: 24px; padding: 2rem;">
-                <h3 style="color:#1e4d2e;">Key features</h3>
-                <div class="usp-list">
-                    <div class="usp-item">100% Pure & Organic</div>
-                    <div class="usp-item">High piperine content</div>
-                    <div class="usp-item">Warming & invigorating</div>
-                    <div class="usp-item">Rich in antioxidants</div>
-                    <div class="usp-item">Sustainably sourced</div>
-                    <div class="usp-item">Small‑batch quality</div>
-                </div>
-                <p style="margin-top: 1.5rem;"><strong>Applications:</strong> Aromatherapy · Cosmetics · Food & beverage · Pharmaceutical · Perfumery · Ayurveda</p>
-            </div>
-        </div>
-
-        <h3 style="margin: 2.5rem 0 1rem;">Estimated wholesale pricing</h3>
-        <table class="price-table">
-            <tr><th>Size</th><th>Price (USD)</th></tr>
-            <tr><td>10 ml</td><td>$15 – $25</td></tr>
-            <tr><td>30 ml</td><td>$35 – $55</td></tr>
-            <tr><td>100 ml</td><td>$90 – $140</td></tr>
-            <tr><td>1 kg (bulk)</td><td>$200 – $400</td></tr>
-        </table>
-        <p style="margin-top: 0.5rem;">* Final price depends on quantity and destination.</p>
-
-        <div style="background: #f2f9ee; border-radius: 24px; padding: 1.8rem; margin: 2rem 0;">
-            <h4>📦 Trade terms</h4>
-            <p><strong>MOQ:</strong> negotiable (samples available) &nbsp; | &nbsp; <strong>Delivery:</strong> FOB Colombo / CIF Dubai &nbsp; | &nbsp; <strong>Payment:</strong> 50% advance, 50% on shipment</p>
-            <p><strong>Certifications:</strong> Organic (pending) · GMP (pending) · EDB registered · Phytosanitary</p>
-        </div>
-    </div>
-
-    <div class="container" id="about">
-        <h2 class="section-title">👤 Founder</h2>
-        <div class="founder-box">
-            <h3>S.M. Sudesh Madushanka</h3>
-            <p style="font-size: 1.1rem;">19+ years HR & administrative experience · Deep knowledge of UAE & Middle East markets</p>
-            <div class="badge-list">
-                <span class="badge">🇱🇰 VTA Certified Entrepreneur (2003)</span>
-                <span class="badge">🍽️ NVQ Level 3 – F&B Service (2023)</span>
-                <span class="badge">🗣️ Sinhala · English · Tamil</span>
-            </div>
-        </div>
-
-        <!-- Mission Statement -->
-        <div class="mission-box">
-            <h3 style="color: #1e4d2e; margin-bottom: 1rem;">🎯 Our Mission</h3>
-            <p>"To produce and export 100% organic, steam-distilled pepper essential oil of uncompromising quality, bridging Sri Lanka's spice heritage with global wellness markets through integrity and partnership."</p>
-            <p style="margin-top: 1rem; font-style: normal;"><strong>Our Commitment:</strong> At PrimePepper Global, we harness the power of steam distillation to extract the purest black pepper essential oil. Our organic peppercorns are meticulously sourced from local Sri Lankan farmers, ensuring a product free from chemicals and full of natural potency.</p>
-        </div>
-    </div>
-
-    <div class="container" id="contact">
-        <div class="contact-section">
-            <h2 style="color: white; margin-bottom: 2rem;">Contact PrimePepper Global</h2>
-            <div class="contact-info">
-                <div class="contact-card">
-                    <h4>📍 Address</h4>
-                    <p>4/95, Angunawala,<br>Peradaniya, Sri Lanka</p>
-                </div>
-                <div class="contact-card">
-                    <h4>📞 Phone / WhatsApp</h4>
-                    <p><strong>UAE:</strong> <a href="https://wa.me/971568840769" target="_blank">+971 56 884 0769</a><br>
-                    <strong>Sri Lanka:</strong> <a href="https://wa.me/94762015894" target="_blank">+94 76 201 5894</a></p>
-                </div>
-                <div class="contact-card">
-                    <h4>📧 Email</h4>
-                    <p><a href="mailto:sudheshmadushanka@gmail.com">sudheshmadushanka@gmail.com</a></p>
-                </div>
-                <div class="contact-card">
-                    <h4>🔗 Online</h4>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/sudesh-madushanka" target="_blank">/in/sudesh-madushanka</a><br>
-                    Portfolio: <a href="https://sudeshmadushanka-blip.github.io/portfolio-website-/" target="_blank">sudeshmadushanka-blip.github.io</a></p>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 2.5rem; font-size: 1.2rem;">Sri Lanka's Finest Organic Pepper Essential Oil</p>
-        </div>
-    </div>
-
-    <footer>
+    <section id="product" class="section">
         <div class="container">
-            <p>© 2026 PrimePepper Global (Pvt) Ltd · All rights reserved · Pure · Organic · Premium</p>
-            <p style="margin-top: 0.8rem;">✉️ <a href="mailto:sudheshmadushanka@gmail.com">sudheshmadushanka@gmail.com</a> | 📞 <a href="https://wa.me/971568840769" target="_blank">UAE +971 56 884 0769</a> | 📞 <a href="https://wa.me/94762015894" target="_blank">SL +94 76 201 5894</a></p>
+            <div class="section-title">
+                <h2>🌿 Organic Black Pepper Essential Oil</h2>
+                <p>100% Pure · Steam Distilled · Sri Lankan Origin</p>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>Product Details</h3>
+                    <div class="spec-item">
+                        <span class="spec-label">Botanical name</span>
+                        <span class="spec-value">Piper nigrum</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Extraction</span>
+                        <span class="spec-value">Steam distillation</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Plant part</span>
+                        <span class="spec-value">Dried peppercorns</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Origin</span>
+                        <span class="spec-value">Sri Lanka (Ceylon)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Appearance</span>
+                        <span class="spec-value">Clear, pale yellow to light green</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Aroma</span>
+                        <span class="spec-value">Warm, spicy, woody, fresh</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Density (20°C)</span>
+                        <span class="spec-value">0.864 – 0.884</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Refractive index</span>
+                        <span class="spec-value">1.479 – 1.490</span>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <h3>Key Features</h3>
+                    <div class="usp-list">
+                        <div class="usp-item">100% Pure & Organic</div>
+                        <div class="usp-item">High piperine content</div>
+                        <div class="usp-item">Warming & invigorating</div>
+                        <div class="usp-item">Rich in antioxidants</div>
+                        <div class="usp-item">Sustainably sourced</div>
+                        <div class="usp-item">Small‑batch quality</div>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px; color: #0a3b2e;">Applications</h3>
+                    <p style="margin-top: 15px;">Aromatherapy · Cosmetics · Food & beverage · Pharmaceutical · Perfumery · Ayurveda</p>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1.8rem; color: #0a3b2e; margin: 50px 0 20px;">Wholesale Pricing</h3>
+            <table class="price-table">
+                <tr>
+                    <th>Size</th>
+                    <th>Price (USD)</th>
+                </tr>
+                <tr>
+                    <td>10 ml</td>
+                    <td>$15 – $25</td>
+                </tr>
+                <tr>
+                    <td>30 ml</td>
+                    <td>$35 – $55</td>
+                </tr>
+                <tr>
+                    <td>100 ml</td>
+                    <td>$90 – $140</td>
+                </tr>
+                <tr>
+                    <td>1 kg (bulk)</td>
+                    <td>$200 – $400</td>
+                </tr>
+            </table>
+            <p style="text-align: right; font-size: 0.95rem; color: #5a6e5f;">* Final price depends on quantity and destination.</p>
+
+            <div class="trade-terms">
+                <h4><i class="fas fa-truck" style="margin-right: 10px;"></i> Trade Terms</h4>
+                <p style="font-size: 1.1rem;"><strong>MOQ:</strong> negotiable (samples available) &nbsp; | &nbsp; <strong>Delivery:</strong> FOB Colombo / CIF Dubai &nbsp; | &nbsp; <strong>Payment:</strong> 50% advance, 50% on shipment</p>
+                <p style="font-size: 1.1rem; margin-top: 15px;"><strong>Certifications:</strong> Organic (pending) · GMP (pending) · EDB registered · Phytosanitary</p>
+            </div>
         </div>
-    </footer>
-</body>
-</html> 
+    </section>
+
+    <section id="about" class="section" style="background: #ecf3e8;">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Meet the Founder & Our Mission</p>
+            </div>
+
+            <div class="founder-box">
+                <h3>S.M. Sudesh Madushanka</h3>
+                <p style="font-size: 1.2rem;">Founder & Director · PrimePepper Global (Pvt) Ltd</p>
+                <p style="margin-top: 20px;">19+ years HR & administrative experience · Deep knowledge of UAE & Middle East markets</p>
+                <div class="badge-list">
+                    <span class="badge">VTA Certified Entrepreneur (2003)</span>
+                    <span class="badge">NVQ Level 3 – F&B Service (2023)</span>
+                    <span class="badge">Sinhala · English · Tamil</span>
+                </div>
+            </div>
+
+            <div class="mission-box">
+                <h3 style="color: #0a3b2e; margin-bottom: 20px;">🎯 Our Mission</h3>
+                <p>"To produce and export 100% organic, steam-distilled pepper essential oil of uncompromising quality, bridging Sri Lanka's spice heritage with global wellness markets through integrity and partnership."</p>
+                <p style="margin-top: 25px; font-style: normal;"><strong>Our Commitment:</strong> At PrimePepper Global, we harness the power of steam distillation to extract the purest black pepper essential oil. Our organic peppercorns are meticulously sourced from local Sri Lankan farmers, ensuring a product free from chemicals and full of natural potency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-section">
+                <h2 style="text-align: center; font-size: 2.2rem;">📞 Contact PrimePepper Global</h2>
+                
+                <div class=
