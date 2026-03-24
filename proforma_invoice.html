@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proforma Invoice - PrimePepper Global</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.4; }
+        .invoice-box { max-width: 800px; margin: auto; padding: 20px; border: 1px solid #eee; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .header { text-align: center; margin-bottom: 20px; }
+        .company-name { font-size: 24px; font-weight: bold; color: #2c5e2e; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .footer { margin-top: 30px; font-size: 12px; text-align: center; color: #777; border-top: 1px solid #ccc; padding-top: 10px; }
+        .note { background-color: #f9f9f9; padding: 10px; margin-top: 20px; }
+        @media print { body { margin: 0; padding: 0; } .no-print { display: none; } }
+    </style>
+</head>
+<body>
+<div class="invoice-box">
+    <div class="header">
+        <div class="company-name">PrimePepper Global (Pvt) Ltd</div>
+        <div>PURE · ORGANIC · PREMIUM</div>
+        <div>Organic Black Pepper Essential Oil – Piper nigrum</div>
+    </div>
 
+    <div>
+        <strong>Proforma Invoice</strong><br>
+        <strong>Invoice No:</strong> PPG/PI/001<br>
+        <strong>Date:</strong> 2026-03-24<br>
+        <strong>Valid Until:</strong> 2026-04-30
+    </div>
+
+    <div style="margin-top: 20px;">
+        <strong>Buyer:</strong><br>
+        [ගැනුම්කරුගේ සමාගමේ නම]<br>
+        [ලිපිනය, නගරය, රට]
+    </div>
+
+    <h3>Product Details</h3>
+    <table>
+        <thead><tr><th>Description</th><th>Qty</th><th>Unit Price (USD)</th><th>Total (USD)</th></tr></thead>
+        <tbody>
+            <tr><td>Organic Black Pepper Essential Oil – Steam Distilled, 100% Pure, Sri Lanka Origin</td><td>2 kg</td><td>330.00</td><td>660.00</td></tr>
+        </tbody>
+    </table>
+
+    <div><strong>Total Amount:</strong> USD 660.00</div>
+    <div><strong>Delivery Terms:</strong> FOB Colombo</div>
+    <div><strong>Payment Terms:</strong> 50% advance, 50% against shipping documents</div>
+
+    <div class="note">
+        <strong>Note:</strong> This is a Proforma Invoice for quotation purposes only. Our USD foreign currency account is currently being opened. Upon order confirmation, we will issue the Commercial Invoice with our official bank details.
+    </div>
+
+    <div class="footer">
+        PrimePepper Global (Pvt) Ltd, Sri Lanka<br>
+        📞 +971 56 884 0769 &nbsp;|&nbsp; 📧 sudheshmadushanka@gmail.com
+    </div>
+    <div class="no-print" style="text-align:center; margin-top:20px;">
+        <button onclick="window.print();">Print / Save as PDF</button>
+    </div>
+</div>
+</body>
+</html>
