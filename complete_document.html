@@ -62,10 +62,12 @@
             margin-top: 20px;
             border-radius: 5px;
         }
-        .editable-field {
+        .editable {
             background: #fff8e7;
-            border: 1px dashed #ccc;
-            padding: 5px;
+            display: inline-block;
+            padding: 2px 4px;
+            border: 1px dashed #aaa;
+            min-width: 80px;
         }
         .footer {
             margin-top: 30px;
@@ -95,6 +97,11 @@
             }
             button {
                 display: none;
+            }
+            .editable {
+                border: none;
+                background: transparent;
+                padding: 0;
             }
         }
     </style>
@@ -160,27 +167,27 @@
     <!-- ========== PROFORMA INVOICE SECTION ========== -->
     <h2>📄 Proforma Invoice (Editable)</h2>
     <div class="invoice-box">
-        <p><strong>Invoice No:</strong> PPG/PI/001<br>
-        <strong>Date:</strong> <span id="inv-date">2026-03-24</span><br>
-        <strong>Valid Until:</strong> <span id="valid-until">2026-04-30</span></p>
+        <p><strong>Invoice No:</strong> <span id="inv-no" class="editable" contenteditable="true">PPG/PI/001</span><br>
+        <strong>Date:</strong> <span id="inv-date" class="editable" contenteditable="true">2026-03-24</span><br>
+        <strong>Valid Until:</strong> <span id="valid-until" class="editable" contenteditable="true">2026-04-30</span></p>
 
         <p><strong>Buyer:</strong><br>
-        <span id="buyer-name" contenteditable="true" style="background:#fff3cf; display:inline-block; min-width:200px;">[Buyer Company Name]</span><br>
-        <span id="buyer-address" contenteditable="true" style="background:#fff3cf; display:inline-block;">[Address, City, Country]</span></p>
+        <span id="buyer-name" class="editable" contenteditable="true" style="display:inline-block; width:80%;">[Buyer Company Name]</span><br>
+        <span id="buyer-address" class="editable" contenteditable="true" style="display:inline-block; width:80%;">[Address, City, Country]</span></p>
 
         <table style="background:white;">
             <thead><tr><th>Description</th><th>Qty</th><th>Unit Price (USD)</th><th>Total (USD)</th></tr></thead>
             <tbody>
                 <tr>
                     <td>Organic Black Pepper Essential Oil – Steam Distilled, 100% Pure, Sri Lanka Origin</td>
-                    <td><span id="qty" contenteditable="true">2 kg</span></td>
-                    <td><span id="unit-price" contenteditable="true">330.00</span></td>
-                    <td><span id="total" contenteditable="true">660.00</span></td>
+                    <td><span id="qty" class="editable" contenteditable="true">2 kg</span></td>
+                    <td><span id="unit-price" class="editable" contenteditable="true">330.00</span></td>
+                    <td><span id="total" class="editable" contenteditable="true">660.00</span></td>
                 </tr>
             </tbody>
         </table>
 
-        <p><strong>Total Amount:</strong> USD <span id="total-amount">660.00</span><br>
+        <p><strong>Total Amount:</strong> USD <span id="total-amount" class="editable" contenteditable="true">660.00</span><br>
         <strong>Delivery Terms:</strong> FOB Colombo<br>
         <strong>Payment Terms:</strong> 50% advance, 50% against shipping documents</p>
 
@@ -217,4 +224,4 @@
     </div>
 </div>
 </body>
-</html>
+                                                                               </html>
