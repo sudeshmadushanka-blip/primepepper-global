@@ -1,590 +1,373 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrimePepper Global | Organic Black Pepper Essential Oil</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PrimePepper Global | Organic Black Pepper Essential Oil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #fefcf5;
-    color: #1e2a1b;
-    line-height: 1.5;
-  }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f2ea;
+      color: #1f2b1f;
+      line-height: 1.6;
+    }
 
-  .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url('hero-image.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
 
-  /* Navigation */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    flex-wrap: wrap;
-    gap: 16px;
-    border-bottom: 1px solid #e2dccd;
-  }
+    .hero {
+      max-width: 850px;
+      color: white;
+    }
 
-  .logo h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 600;
-    color: #2c5e2a;
-    letter-spacing: -0.5px;
-  }
+    .hero img {
+      width: 140px;
+      margin-bottom: 25px;
+    }
 
-  .logo p {
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: #b68b40;
-    text-transform: uppercase;
-    margin-top: 4px;
-  }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
 
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-  }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 35px;
+      color: #f0f0f0;
+    }
 
-  .nav-links a {
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    color: #2c3e2b;
-    transition: color 0.2s;
-  }
+    .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-  .nav-links a:hover {
-    color: #b68b40;
-  }
+    .btn {
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
 
-  .btn-outline {
-    border: 1.5px solid #2c5e2a;
-    background: transparent;
-    padding: 8px 20px;
-    border-radius: 40px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #2c5e2a;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
+    .btn-primary {
+      background: #d4a437;
+      color: #111;
+    }
 
-  .btn-outline:hover {
-    background: #2c5e2a;
-    color: white;
-  }
+    .btn-primary:hover {
+      background: #f2c14d;
+    }
 
-  /* Hero Section */
-  .hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 60px 0 80px;
-    gap: 40px;
-  }
+    .btn-secondary {
+      border: 2px solid white;
+      color: white;
+    }
 
-  .hero-content {
-    flex: 1;
-    min-width: 280px;
-  }
+    .btn-secondary:hover {
+      background: white;
+      color: #111;
+    }
 
-  .hero-badge {
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: #b68b40;
-    margin-bottom: 16px;
-    font-weight: 500;
-  }
+    section {
+      padding: 80px 10%;
+    }
 
-  .hero-content h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 52px;
-    font-weight: 600;
-    color: #1e3a1c;
-    line-height: 1.2;
-    margin-bottom: 20px;
-  }
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
-  .hero-content p {
-    font-size: 16px;
-    color: #4a5b44;
-    margin-bottom: 28px;
-    max-width: 500px;
-  }
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: #234423;
+      margin-bottom: 10px;
+    }
 
-  .hero-buttons {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
+    .section-title p {
+      color: #555;
+    }
 
-  .btn-primary {
-    background: #2c5e2a;
-    border: none;
-    padding: 12px 28px;
-    border-radius: 40px;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.2s;
-  }
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
 
-  .btn-primary:hover {
-    background: #1f451e;
-  }
+    .about img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
 
-  .hero-image {
-    flex: 1;
-    min-width: 280px;
-    text-align: center;
-  }
+    .about-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #234423;
+    }
 
-  .hero-image img {
-    max-width: 100%;
-    width: 280px;
-    border-radius: 24px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  }
+    .features {
+      background: #1f3320;
+      color: white;
+    }
 
-  .product-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: #f0ede3;
-    padding: 10px 20px;
-    border-radius: 60px;
-    margin-top: 20px;
-    font-size: 13px;
-    font-weight: 500;
-    color: #2c5e2a;
-  }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
 
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
+    .feature-box {
+      background: rgba(255,255,255,0.08);
+      padding: 30px 20px;
+      border-radius: 14px;
       text-align: center;
     }
-    .nav-links {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+
+    .feature-box h3 {
+      margin-bottom: 12px;
+      color: #f2c14d;
     }
-    .hero-content h1 {
-      font-size: 40px;
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
     }
-  }
-</style>
-</head>
-<body>
-<div class="container">
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="logo">
-      <h1>PrimePepper Global</h1>
-      <p>Pure · Organic · Premium</p>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Product</a></li>
-      <li><a href="#">Specs</a></li>
-      <li><a href="#">Price</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <button class="btn-outline" onclick="alert('Sample request form coming soon')">Request Sample</button>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-badge">✦ Sri Lanka (Ceylon) ✦</div>
-      <h1>Organic Black Pepper Essential Oil</h1>
-      <p>100% pure, steam distilled from Piper nigrum. High piperine content, ITI-verified, and ethically sourced from Sri Lanka’s premium pepper belt.</p>
-      <div class="hero-buttons">
-        <button class="btn-primary" onclick="alert('View price list')">View Price List</button>
-        <button class="btn-outline" onclick="alert('Contact +971 56 884 0769')">Contact Sales</button>
-      </div>
-      <div class="product-badge">
-        <span>🌱 USDA Organic (Pending)</span>
-        <span>🔬 GC-MS Tested</span>
-        <span>✈️ FOB Colombo / CIF Dubai</span>
-      </div>
-    </div>
-    <div class="hero-image"><img src="my-bottle.jpg" alt="Organic Black Pepper Essential Oil Bottle">
-    </div>
-  </section>
- <!-- ========== PART 2: PRODUCT FEATURES & CERTIFICATIONS ========== -->
-<section style="padding: 60px 0; background: #ffffff;">
-  <div class="container">
-    <div style="text-align: center; margin-bottom: 48px;">
-      <span style="font-size: 12px; letter-spacing: 4px; color: #b68b40; text-transform: uppercase;">Why PrimePepper Global</span>
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: #1e3a1c; margin-top: 12px;">Pure · Organic · Premium</h2>
-      <div style="width: 60px; height: 2px; background: #b68b40; margin: 20px auto 0;"></div>
-    </div>
+    .product-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      padding-bottom: 25px;
+    }
 
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-      <!-- Left: Features List -->
-      <div style="flex: 1; min-width: 260px;">
-        <h3 style="font-size: 24px; font-weight: 600; color: #2c5e2a; margin-bottom: 24px;">✨ Key Features</h3>
-        <div style="display: flex; flex-direction: column; gap: 20px;">
-          <div><span style="font-weight: 700;">✓ 100% Pure & Organic</span><br><span style="color: #5a6b55; font-size: 14px;">No additives, no synthetics. Steam distilled only.</span></div>
-          <div><span style="font-weight: 700;">✓ High Piperine Content (≥35%)</span><br><span style="color: #5a6b55; font-size: 14px;">Superior therapeutic quality – ITI verified per batch.</span></div>
-          <div><span style="font-weight: 700;">✓ Farm-to-Vial Traceability</span><br><span style="color: #5a6b55; font-size: 14px;">Sourced from Welimada & Peradeniya – Sri Lanka’s Black Pepper Belt.</span></div>
-          <div><span style="font-weight: 700;">✓ GC-MS Tested / CREA Validation (EU)</span><br><span style="color: #5a6b55; font-size: 14px;">Independent scientific credibility for European buyers.</span></div>
-          <div><span style="font-weight: 700;">✓ Full Export Documentation</span><br><span style="color: #5a6b55; font-size: 14px;">MSDS, COO, Phytosanitary, Chemical Analysis per shipment.</span></div>
-        </div>
-      </div>
+    .product-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
 
-      <!-- Right: Certifications + Image -->
-      <div style="flex: 1; min-width: 260px; text-align: center;">
-        <img src="1000022490.png" alt="PrimePepper Logo" style="max-width: 180px; margin-bottom: 24px;" onerror="this.src='https://placehold.co/180x180?text=PPG'">
-        <div style="background: #fefcf5; border-radius: 20px; padding: 24px; border: 1px solid #e2dccd;">
-          <h4 style="font-weight: 600; margin-bottom: 16px;">📜 Certifications & Compliance</h4>
-          <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
-            <span style="background: #2c5e2a10; padding: 6px 14px; border-radius: 40px; font-size: 13px;">🌱 Organic (Pending)</span>
-            <span style="background: #2c5e2a10; padding: 6px 14px; border-radius: 40px; font-size: 13px;">🔬 GMP (Pending)</span>
-            <span style="background: #2c5e2a10; padding: 6px 14px; border-radius: 40px; font-size: 13px;">📄 EDB Registered</span>
-            <span style="background: #2c5e2a10; padding: 6px 14px; border-radius: 40px; font-size: 13px;">🛡️ Phytosanitary</span>
-            <span style="background: #2c5e2a10; padding: 6px 14px; border-radius: 40px; font-size: 13px;">🇪🇺 CREA Italy (Research)</span>
-            <span style="background: #2c5e2a10; padding: 6px 14px; border-radius: 40px; font-size: 13px;">📊 GC-MS Quarterly</span>
-          </div>
-          <p style="margin-top: 20px; font-size: 13px; color: #b68b40;">* All certificates actively in process for first export batch</p>
-        </div>
-      </div>
-    </div>
+    .product-card h3 {
+      margin-top: 20px;
+      color: #234423;
+    }
 
-    <!-- USP Strip -->
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 56px; padding-top: 32px; border-top: 1px solid #e2dccd;">
-      <div style="text-align: center; flex: 1;"><span style="font-size: 28px;">🇱🇰</span><br><strong>Ceylon Origin</strong><br><span style="font-size: 13px; color: #5a6b55;">Sri Lanka’s premium pepper belt</span></div>
-      <div style="text-align: center; flex: 1;"><span style="font-size: 28px;">📦</span><br><strong>FOB Colombo / CIF Dubai</strong><br><span style="font-size: 13px; color: #5a6b55;">Flexible trade terms</span></div>
-      <div style="text-align: center; flex: 1;"><span style="font-size: 28px;">🤝</span><br><strong>Private Label</strong><br><span style="font-size: 13px; color: #5a6b55;">Small-batch & custom orders</span></div>
-      <div style="text-align: center; flex: 1;"><span style="font-size: 28px;">📄</span><br><strong>Sample Agreement</strong><br><span style="font-size: 13px; color: #5a6b55;">Legally protected evaluation</span></div>
-    </div>
-  </div>
-</section>
- <!-- ========== PART 3: TECHNICAL SPECS + CHEMICAL ANALYSIS + MSDS ========== -->
-<section style="padding: 60px 0; background: #f8f6f0;">
-  <div class="container">
-    <div style="text-align: center; margin-bottom: 48px;">
-      <span style="font-size: 12px; letter-spacing: 4px; color: #b68b40; text-transform: uppercase;">Quality You Can Trust</span>
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: #1e3a1c; margin-top: 12px;">Technical Specifications</h2>
-      <div style="width: 60px; height: 2px; background: #b68b40; margin: 20px auto 0;"></div>
-    </div>
+    .product-card p {
+      padding: 10px 20px;
+      color: #666;
+    }
 
-    <!-- Two columns: Specs Table + Chemical Analysis -->
-    <div style="display: flex; flex-wrap: wrap; gap: 40px;">
-      <!-- Left: Specifications Table -->
-      <div style="flex: 1; min-width: 260px; background: white; border-radius: 24px; padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
-        <h3 style="font-size: 22px; font-weight: 600; color: #2c5e2a; margin-bottom: 24px; border-left: 4px solid #b68b40; padding-left: 16px;">📊 Product Specifications</h3>
-        <table style="width: 100%; border-collapse: collapse;">
-          <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px 0; font-weight: 600;">Botanical Name</td><td style="padding: 12px 0;">Piper nigrum</td></tr>
-          <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px 0; font-weight: 600;">Extraction Method</td><td style="padding: 12px 0;">Steam Distillation</td></tr>
-          <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px 0; font-weight: 600;">Plant Part</td><td style="padding: 12px 0;">Dried Black Peppercorns</td></tr>
-          <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px 0; font-weight: 600;">Appearance</td><td style="padding: 12px 0;">Clear, light yellow-green</td></tr>
-          <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px 0; font-weight: 600;">Aroma</td><td style="padding: 12px 0;">Warm, spicy, woody</td></tr>
-          <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px 0; font-weight: 600;">Density (20°C)</td><td style="padding: 12px 0;">0.864 – 0.884 g/ml</td></tr>
-          <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px 0; font-weight: 600;">Refractive Index (20°C)</td><td style="padding: 12px 0;">1.479 – 1.490</td></tr>
-          <tr><td style="padding: 12px 0; font-weight: 600;">Optical Rotation</td><td style="padding: 12px 0;">-1° to -15°</td></tr>
-        </table>
-      </div>
+    .sample-box {
+      background: linear-gradient(to right, #234423, #2d5a2d);
+      color: white;
+      border-radius: 20px;
+      padding: 60px 40px;
+      text-align: center;
+    }
 
-      <!-- Right: Chemical Analysis & MSDS -->
-      <div style="flex: 1; min-width: 260px; display: flex; flex-direction: column; gap: 24px;">
-        <!-- Chemical Analysis Card -->
-        <div style="background: white; border-radius: 24px; padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
-          <h3 style="font-size: 22px; font-weight: 600; color: #2c5e2a; margin-bottom: 16px; border-left: 4px solid #b68b40; padding-left: 16px;">🔬 Chemical Analysis (ITI Verified)</h3>
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 10px 0; font-weight: 600;">Piperine Content</td><td style="padding: 10px 0;">≥ 35% (GC-MS)</td></tr>
-            <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 10px 0; font-weight: 600;">Microbial Count</td><td style="padding: 10px 0;">< 1000 CFU/g</td></tr>
-            <tr><td style="padding: 10px 0; font-weight: 600;">Heavy Metals</td><td style="padding: 10px 0;">Compliant with EU limits</td></tr>
-          </table>
-          <p style="margin-top: 20px; font-size: 13px; color: #b68b40;">✔ Each batch tested by ITI (Industrial Technology Institute, Sri Lanka)</p>
-        </div>
+    .sample-box h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
 
-        <!-- MSDS Card -->
-        <div style="background: white; border-radius: 24px; padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.04);">
-          <h3 style="font-size: 22px; font-weight: 600; color: #2c5e2a; margin-bottom: 16px; border-left: 4px solid #b68b40; padding-left: 16px;">📋 MSDS (Material Safety Data Sheet)</h3>
-          <p><strong>UN Number:</strong> 1169<br>
-          <strong>Class:</strong> 3 (Flammable Liquid)<br>
-          <strong>Packing Group:</strong> III<br>
-          <strong>Status:</strong> In preparation – ready June 2026</p>
-          <p style="margin-top: 12px; font-size: 14px;">✅ Includes hazard identification, first-aid, fire-fighting, handling/storage, and transport information. Compliant with GHS standards.</p>
-        </div>
-      </div>
-    </div>
+    .contact {
+      background: #f1eee7;
+    }
 
-    <!-- Batch Testing Frequency Row -->
-    <div style="margin-top: 48px; background: #ffffffcc; border-radius: 20px; padding: 28px; text-align: center; border: 1px solid #e2dccd;">
-      <h3 style="font-weight: 600; margin-bottom: 20px;">📅 Quality Testing Frequency</h3>
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 32px;">
-        <div><strong>Density / RI / Rotation</strong><br>Every batch</div>
-        <div><strong>GC-MS (Piperine)</strong><br>Quarterly</div>
-        <div><strong>Microbial Test</strong><br>Every batch</div>
-        <div><strong>Full Analysis (ITI)</strong><br>Per production lot</div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ========== PART 4: PRICING + TRADE TERMS + PAYMENT ========== -->
-<section style="padding: 60px 0; background: #ffffff;">
-  <div class="container">
-    <div style="text-align: center; margin-bottom: 48px;">
-      <span style="font-size: 12px; letter-spacing: 4px; color: #b68b40; text-transform: uppercase;">Transparent Pricing</span>
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: #1e3a1c; margin-top: 12px;">Price List · March 2026</h2>
-      <div style="width: 60px; height: 2px; background: #b68b40; margin: 20px auto 0;"></div>
-      <p style="margin-top: 20px; color: #5a6b55;">All prices in USD (US Dollars) — FOB Colombo, Sri Lanka</p>
-    </div>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
 
-    <!-- Retail / Sample Sizes Table -->
-    <div style="background: #fefcf5; border-radius: 24px; padding: 28px; margin-bottom: 40px; border: 1px solid #e2dccd;">
-      <h3 style="font-size: 22px; font-weight: 600; color: #2c5e2a; margin-bottom: 20px; border-left: 4px solid #b68b40; padding-left: 16px;">📦 Retail & Sample Sizes</h3>
-      <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse;">
-          <thead>
-            <tr style="background: #2c5e2a; color: white;">
-              <th style="padding: 14px; text-align: left;">Size</th>
-              <th style="padding: 14px; text-align: left;">FOB Colombo (USD)</th>
-              <th style="padding: 14px; text-align: left;">CIF Dubai (USD)</th>
-              <th style="padding: 14px; text-align: left;">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px;">10 ml</td><td style="padding: 12px;">15 – 25</td><td style="padding: 12px;">25 – 35</td><td style="padding: 12px;">Sample / Retail</td></tr>
-            <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px;">30 ml</td><td style="padding: 12px;">35 – 55</td><td style="padding: 12px;">45 – 65</td><td style="padding: 12px;">Standard Bottle</td></tr>
-            <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px;">100 ml</td><td style="padding: 12px;">90 – 140</td><td style="padding: 12px;">100 – 150</td><td style="padding: 12px;">Professional / Spa</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    .contact-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
 
-    <!-- Bulk Sizes Table -->
-    <div style="background: #fefcf5; border-radius: 24px; padding: 28px; margin-bottom: 40px; border: 1px solid #e2dccd;">
-      <h3 style="font-size: 22px; font-weight: 600; color: #2c5e2a; margin-bottom: 20px; border-left: 4px solid #b68b40; padding-left: 16px;">📦 Bulk Sizes (FOB Colombo)</h3>
-      <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse;">
-          <thead>
-            <tr style="background: #2c5e2a; color: white;">
-              <th style="padding: 14px; text-align: left;">Quantity</th>
-              <th style="padding: 14px; text-align: left;">Price (USD)</th>
-              <th style="padding: 14px; text-align: left;">Approx. kg Rate (USD)</th>
-              <th style="padding: 14px; text-align: left;">Discount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px;">1 kg</td><td style="padding: 12px;">200 – 400</td><td style="padding: 12px;">200 – 400</td><td style="padding: 12px;">Base</td></tr>
-            <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px;">2 kg</td><td style="padding: 12px;">380 – 750</td><td style="padding: 12px;">190 – 375</td><td style="padding: 12px;">~5%</td></tr>
-            <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px;">4 kg</td><td style="padding: 12px;">720 – 1,400</td><td style="padding: 12px;">180 – 350</td><td style="padding: 12px;">~10%</td></tr>
-            <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px;">5 kg</td><td style="padding: 12px;">900 – 1,700</td><td style="padding: 12px;">180 – 340</td><td style="padding: 12px;">~10%</td></tr>
-            <tr style="border-bottom: 1px solid #e2dccd;"><td style="padding: 12px;">10 kg</td><td style="padding: 12px;">1,700 – 3,200</td><td style="padding: 12px;">170 – 320</td><td style="padding: 12px;">~15%</td></tr>
-            <tr><td style="padding: 12px;">>10 kg</td><td style="padding: 12px;" colspan="3">Contact for volume pricing</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    .contact-card h3 {
+      color: #234423;
+      margin-bottom: 15px;
+    }
 
-    <!-- Trade Terms + Payment Terms (two columns) -->
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px;">
-      <div style="flex: 1; background: #f8f6f0; border-radius: 24px; padding: 28px;">
-        <h3 style="font-size: 22px; font-weight: 600; color: #2c5e2a; margin-bottom: 16px;">🚢 Trade Terms</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 12px;">✓ <strong>Incoterms:</strong> FOB Colombo / CIF Dubai (or buyer’s port)</li>
-          <li style="margin-bottom: 12px;">✓ <strong>Delivery:</strong> 2–4 weeks after order confirmation</li>
-          <li style="margin-bottom: 12px;">✓ <strong>Shipping:</strong> Air freight (express) or sea freight</li>
-          <li style="margin-bottom: 12px;">✓ <strong>Insurance:</strong> Available upon request (CIF includes insurance)</li>
-          <li style="margin-bottom: 12px;">✓ <strong>Private Label / OEM:</strong> MOQ applies – contact for details</li>
-        </ul>
-      </div>
-      <div style="flex: 1; background: #f8f6f0; border-radius: 24px; padding: 28px;">
-        <h3 style="font-size: 22px; font-weight: 600; color: #2c5e2a; margin-bottom: 16px;">💰 Payment Terms</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 12px;">✓ <strong>Under USD 1,000:</strong> 100% advance (TT / Wire)</li>
-          <li style="margin-bottom: 12px;">✓ <strong>≥ USD 1,000:</strong> 50% advance, 50% against shipping documents (TT)</li>
-          <li style="margin-bottom: 12px;">✓ <strong>LC at sight</strong> – available for larger orders</li>
-          <li style="margin-bottom: 12px;">✓ <strong>Bank charges outside Sri Lanka:</strong> borne by buyer</li>
-          <li style="margin-bottom: 12px;">✓ <strong>Sample payment:</strong> Shipping cost deductible from first commercial order</li>
-        </ul>
-      </div>
-    </div>
+    footer {
+      background: #152015;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
 
-    <!-- Sample Disclaimer Note -->
-    <div style="margin-top: 40px; padding: 20px; background: #e8f0e6; border-radius: 16px; text-align: center; font-size: 13px; color: #2c5e2a;">
-      📋 <strong>Sample Agreement available</strong> – Samples are for evaluation only, not for resale. Full terms provided with each sample shipment.
-    </div>
-  </div>
-</section>
-<!-- ========== PART 5: SAMPLE REQUEST + CONTACT FORM + INQUIRY ========== -->
-<section style="padding: 60px 0; background: #f8f6f0;">
-  <div class="container">
-    <div style="text-align: center; margin-bottom: 48px;">
-      <span style="font-size: 12px; letter-spacing: 4px; color: #b68b40; text-transform: uppercase;">Request a Sample / Get in Touch</span>
-      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 40px; font-weight: 600; color: #1e3a1c; margin-top: 12px;">Let’s Start Your Order</h2>
-      <div style="width: 60px; height: 2px; background: #b68b40; margin: 20px auto 0;"></div>
-      <p style="margin-top: 20px; color: #5a6b55; max-width: 600px; margin-left: auto; margin-right: auto;">Fill out the form below or contact us directly via WhatsApp / Email. We respond within 24 hours.</p>
-    </div>
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
 
-    <!-- Two columns: Form + Contact Info -->
-    <div style="display: flex; flex-wrap: wrap; gap: 40px;">
-      <!-- Left: Sample Request Form -->
-      <div style="flex: 1.5; min-width: 260px; background: white; border-radius: 24px; padding: 32px; box-shadow: 0 8px 24px rgba(0,0,0,0.05);">
-        <h3 style="font-size: 24px; font-weight: 600; color: #2c5e2a; margin-bottom: 8px;">📋 Request a Sample</h3>
-        <p style="font-size: 14px; color: #5a6b55; margin-bottom: 24px;">10ml sample available – shipping cost deductible from first order</p>
-        
-        <form id="sampleForm" onsubmit="event.preventDefault(); alert('Thank you! We will contact you within 24 hours at the email provided. For urgent requests, WhatsApp +971 56 884 0769');">
-          <div style="margin-bottom: 18px;">
-            <label style="display: block; font-weight: 500; margin-bottom: 6px; font-size: 14px;">Full Name *</label>
-            <input type="text" required style="width: 100%; padding: 12px 16px; border: 1px solid #d4d8c8; border-radius: 12px; font-family: inherit; font-size: 14px;">
-          </div>
-          <div style="margin-bottom: 18px;">
-            <label style="display: block; font-weight: 500; margin-bottom: 6px; font-size: 14px;">Company Name *</label>
-            <input type="text" required style="width: 100%; padding: 12px 16px; border: 1px solid #d4d8c8; border-radius: 12px; font-family: inherit; font-size: 14px;">
-          </div>
-          <div style="margin-bottom: 18px;">
-            <label style="display: block; font-weight: 500; margin-bottom: 6px; font-size: 14px;">Email *</label>
-            <input type="email" required style="width: 100%; padding: 12px 16px; border: 1px solid #d4d8c8; border-radius: 12px; font-family: inherit; font-size: 14px;">
-          </div>
-          <div style="margin-bottom: 18px;">
-            <label style="display: block; font-weight: 500; margin-bottom: 6px; font-size: 14px;">Country *</label>
-            <input type="text" required style="width: 100%; padding: 12px 16px; border: 1px solid #d4d8c8; border-radius: 12px; font-family: inherit; font-size: 14px;">
-          </div>
-          <div style="margin-bottom: 18px;">
-            <label style="display: block; font-weight: 500; margin-bottom: 6px; font-size: 14px;">Sample Quantity (10ml bottles)</label>
-            <select style="width: 100%; padding: 12px 16px; border: 1px solid #d4d8c8; border-radius: 12px; font-family: inherit; font-size: 14px;">
-              <option>1 bottle</option>
-              <option>2 bottles</option>
-              <option>3 bottles</option>
-              <option>5+ bottles (contact us)</option>
-            </select>
-          </div>
-          <div style="margin-bottom: 24px;">
-            <label style="display: block; font-weight: 500; margin-bottom: 6px; font-size: 14px;">Intended Use *</label>
-            <select required style="width: 100%; padding: 12px 16px; border: 1px solid #d4d8c8; border-radius: 12px; font-family: inherit; font-size: 14px;">
-              <option value="">Select...</option>
-              <option>Aromatherapy / Wellness</option>
-              <option>Cosmetics / Skincare</option>
-              <option>Food & Beverage</option>
-              <option>Pharmaceutical / Ayurvedic</option>
-              <option>Perfumery</option>
-              <option>Wholesale / Distribution</option>
-            </select>
-          </div>
-          <button type="submit" style="background: #2c5e2a; color: white; border: none; padding: 14px 28px; border-radius: 40px; font-weight: 600; cursor: pointer; width: 100%; font-size: 16px;">Send Sample Request →</button>
-        </form>
-        <p style="font-size: 12px; color: #8a9a80; margin-top: 16px; text-align: center;">* Required fields. We’ll reply with Sample Agreement & shipping quote.</p>
-      </div>
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
 
-      <!-- Right: Contact Info + WhatsApp / Email -->
-      <div style="flex: 1; min-width: 240px; display: flex; flex-direction: column; gap: 24px;">
-        <!-- Direct Contact Card -->
-        <div style="background: white; border-radius: 24px; padding: 28px; box-shadow: 0 8px 24px rgba(0,0,0,0.05);">
-          <h3 style="font-size: 22px; font-weight: 600; color: #2c5e2a; margin-bottom: 20px;">📞 Direct Contact</h3>
-          <div style="margin-bottom: 20px;">
-            <p style="font-weight: 600; margin-bottom: 4px;">📧 Email</p>
-            <a href="mailto:sudheshmadushanka@gmail.com" style="color: #b68b40; text-decoration: none;"> primepepperglobal@gmail.com</a>
-          </div>
-          <div style="margin-bottom: 20px;">
-            <p style="font-weight: 600; margin-bottom: 4px;">📱 Phone / WhatsApp</p>
-            <a href="https://wa.me/971568840769" target="_blank" style="color: #b68b40; text-decoration: none;">+971 56 884 0769</a>
-            <p style="font-size: 12px; color: #5a6b55; margin-top: 4px;">Click to chat on WhatsApp</p>
-          </div>
-          <div>
-            <p style="font-weight: 600; margin-bottom: 4px;">🌐 Website / Portfolio</p>
-            <a href="https://linktr.ee/primepepperglobal" target="_blank" style="color: #b68b40; text-decoration: none;">linktr.ee/primepepperglobal</a>
-          </div>
-        </div>
-
-        <!-- Quick Inquiry Card -->
-        <div style="background: #2c5e2a; border-radius: 24px; padding: 28px; color: white;">
-          <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">⚡ Quick Inquiry</h3>
-          <p style="font-size: 14px; margin-bottom: 20px; opacity: 0.9;">Send a WhatsApp message directly — we reply within a few hours.</p>
-          <a href="https://wa.me/971568840769?text=Hello%20PrimePepper%20Global%2C%20I%27m%20interested%20in%20your%20Organic%20Black%20Pepper%20Essential%20Oil.%20Please%20share%20more%20details%20and%20price%20list." target="_blank" style="display: inline-block; background: white; color: #2c5e2a; padding: 12px 24px; border-radius: 40px; text-decoration: none; font-weight: 600;">Message on WhatsApp →</a>
-        </div>
-
-        <!-- Office / Origin Info -->
-        <div style="background: white; border-radius: 24px; padding: 20px; border: 1px solid #e2dccd; text-align: center;">
-          <p style="font-size: 13px; color: #5a6b55;">🇱🇰 <strong>Sri Lanka (Ceylon)</strong><br>PrimePepper Global (Pvt) Ltd<br>Angunawala, Peradeniya, Kandy</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
- <!-- ========== PART 6: FOOTER + SOCIAL LINKS + ARABIC SECTION ========== -->
-<footer style="background: #1e3a1c; color: #e2dccd; padding: 60px 0 30px; margin-top: 0;">
-  <div class="container">
-    <!-- Main Footer Grid -->
-    <div style="display: flex; flex-wrap: wrap; gap: 48px; justify-content: space-between; margin-bottom: 48px;">
-      
-      <!-- Brand Column -->
-      <div style="flex: 1; min-width: 200px;">
-        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 600; color: #e8c96a; margin-bottom: 16px;">PrimePepper Global</h3>
-        <p style="font-size: 14px; line-height: 1.6;">Pure · Organic · Premium<br>Organic Black Pepper Essential Oil<br>Sri Lanka (Ceylon)</p>
-      </div>
-
-      <!-- Quick Links -->
-      <div style="flex: 1; min-width: 140px;">
-        <h4 style="font-weight: 600; margin-bottom: 16px; color: #e8c96a;">Quick Links</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 10px;"><a href="#" style="color: #e2dccd; text-decoration: none; font-size: 14px;">🏠 Home</a></li>
-          <li style="margin-bottom: 10px;"><a href="#" style="color: #e2dccd; text-decoration: none; font-size: 14px;">📦 Product & Specs</a></li>
-          <li style="margin-bottom: 10px;"><a href="#" style="color: #e2dccd; text-decoration: none; font-size: 14px;">💰 Price List</a></li>
-          <li style="margin-bottom: 10px;"><a href="#" style="color: #e2dccd; text-decoration: none; font-size: 14px;">📋 Sample Request</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact -->
-      <div style="flex: 1; min-width: 200px;">
-        <h4 style="font-weight: 600; margin-bottom: 16px; color: #e8c96a;">Contact</h4>
-        <p style="font-size: 14px; margin-bottom: 8px;">📧 <a href="mailto:primepepperglobal@gmail.com" style="color: #e2dccd; text-decoration: none;">primepepperglobal@gmail.com</a></p>
-        <p style="font-size: 14px; margin-bottom: 8px;">📱 <a href="https://wa.me/971568840769" target="_blank" style="color: #e2dccd; text-decoration: none;">+971 56 884 0769 (WhatsApp)</a></p>
-        <p style="font-size: 14px;">📍 Angunawala, Peradeniya, Kandy, Sri Lanka</p>
-      </div>
-
-      <!-- Social Links -->
-      <div style="flex: 1; min-width: 160px;">
-        <h4 style="font-weight: 600; margin-bottom: 16px; color: #e8c96a;">Follow Us</h4>
-        <div style="display: flex; gap: 20px;">
-          <a href="https://linktr.ee/primepepperglobal" target="_blank" style="color: #e2dccd; font-size: 20px; text-decoration: none;">🔗 linktr</a>
-          <a href="https://linkedin.com/in/sudesh-madushanka" target="_blank" style="color: #e2dccd; font-size: 20px; text-decoration: none;">in</a>
-          <a href="https://github.com/sudheshmadushanka-blip/primepepper-global" target="_blank" style="color: #e2dccd; font-size: 20px; text-decoration: none;">🐙 GitHub</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Arabic Section for UAE Buyers -->
-    <div style="border-top: 1px solid #3a5c38; padding-top: 32px; margin-top: 16px; text-align: center; direction: rtl; font-family: 'Inter', sans-serif;">
-      <h4 style="font-size: 16px; color: #e8c96a; margin-bottom: 16px; direction: ltr;">🇦🇪 للعملاء في الإمارات والشرق الأوسط</h4>
-      <p style="font-size: 14px; line-height: 1.8; margin-bottom: 20px;">
-        نحن شركة PrimePepper Global من سريلانكا – نقدم زيت الفلفل الأسود العضوي النقي 100%، المقطر بالبخار. <br>
-        نصدّر إلى الإمارات والسعودية وأوروبا. وثائق كاملة (MSDS، شهادة المنشأ، تحليل كيميائي).<br>
-        للطلبات والعينات، يرجى التواصل عبر واتساب أو البريد الإلكتروني. نقبل الشحن FOB كولومبو أو CIF دبي.
-      </p>
-      <p style="font-size: 13px; direction: ltr; color: #b8c4b4;">
-        📞 <strong>WhatsApp:</strong> +971 56 884 0769 &nbsp;|&nbsp; ✉️ <strong>Email:</strong> primepepperglobal@gmail.com
-      </p>
-    </div>
-
-    <!-- Copyright -->
-    <div style="border-top: 1px solid #3a5c38; margin-top: 32px; padding-top: 24px; text-align: center; font-size: 12px; color: #a0b39a;">
-      © 2026 PrimePepper Global (Pvt) Ltd — Sri Lanka. All rights reserved.<br>
-      Designed for global buyers. <span style="direction: rtl; display: inline-block;">🌱 Certified Organic (Pending)</span>
-    </div>
-  </div>
-</footer> 
+      section {
+        padding: 60px 6%;
+      }
+    }
+  </style></head>
+<body><header>
+  <div class="hero">
+    <img src="logo.png" alt="PrimePepper Global Logo">
+    <h1>Premium Organic Black Pepper Essential Oil</h1>
+    <p>
+      Direct from Sri Lanka's Finest Pepper Regions • Pure • Organic • Steam Distilled
+    </p><div class="buttons">
+  <a href="https://wa.me/971568840769" class="btn btn-primary">Request Sample</a>
+  <a href="#contact" class="btn btn-secondary">Contact Us</a>
 </div>
-</body>
-  </html>
-  
+
+  </div>
+</header><section>
+  <div class="section-title">
+    <h2>About PrimePepper Global</h2>
+    <p>Export-focused Sri Lankan producer of premium Organic Black Pepper Essential Oil.</p>
+  </div>  <div class="about">
+    <div>
+      <img src="pepper-bottle.jpg" alt="Organic Black Pepper Oil">
+    </div><div class="about-text">
+  <h3>Premium Quality from Sri Lanka</h3>
+
+  <p>
+    PrimePepper Global (Pvt) Ltd specializes in high-quality Organic Black Pepper Essential Oil (Piper nigrum) produced from carefully selected Sri Lankan peppercorns.
+  </p>
+
+  <br>
+
+  <p>
+    Our products are developed for perfumery, aromatherapy, wellness, cosmetic, and industrial applications with a strong focus on UAE and Saudi Arabian export markets.
+  </p>
+
+  <br>
+
+  <p>
+    We offer sample evaluation kits for serious buyers and long-term supply partnerships.
+  </p>
+</div>
+
+  </div>
+</section><section class="features">
+  <div class="section-title">
+    <h2 style="color:white;">Why Choose Us</h2>
+    <p style="color:#ddd;">Built for international fragrance and wellness markets.</p>
+  </div>  <div class="feature-grid">
+    <div class="feature-box">
+      <h3>100% Pure</h3>
+      <p>Steam-distilled organic black pepper essential oil.</p>
+    </div><div class="feature-box">
+  <h3>Sri Lankan Origin</h3>
+  <p>Premium pepper sourced from renowned growing regions.</p>
+</div>
+
+<div class="feature-box">
+  <h3>Export Focused</h3>
+  <p>Focused on UAE, Saudi Arabia, and international markets.</p>
+</div>
+
+<div class="feature-box">
+  <h3>Private Label</h3>
+  <p>OEM and private-label options available for partners.</p>
+</div>
+
+  </div>
+</section><section>
+  <div class="section-title">
+    <h2>Available Sizes</h2>
+    <p>Professional packaging for sample and commercial use.</p>
+  </div>  <div class="products"><div class="product-card">
+  <img src="10ml.jpg" alt="10ml Bottle">
+  <h3>10ml Sample Bottle</h3>
+  <p>Ideal for buyer evaluation, testing, and retail sampling.</p>
+</div>
+
+<div class="product-card">
+  <img src="30ml.jpg" alt="30ml Bottle">
+  <h3>30ml Standard Bottle</h3>
+  <p>Perfect for wellness brands and aromatherapy applications.</p>
+</div>
+
+<div class="product-card">
+  <img src="100ml.jpg" alt="100ml Bottle">
+  <h3>100ml Professional Bottle</h3>
+  <p>Designed for industrial, spa, and fragrance production use.</p>
+</div>
+
+  </div>
+</section><section>
+  <div class="sample-box">
+    <h2>Sample Evaluation Kits Available</h2><p>
+  Serious buyers can request sample kits before bulk purchasing. We support long-term partnerships with fragrance, wellness, and cosmetic companies.
+</p>
+
+<br>
+
+<a href="https://wa.me/971568840769" class="btn btn-primary">Request Sample Kit</a>
+
+  </div>
+</section><section class="contact" id="contact">
+  <div class="section-title">
+    <h2>Contact Us</h2>
+    <p>Let's discuss your requirements and potential collaboration.</p>
+  </div>  <div class="contact-grid"><div class="contact-card">
+  <h3>WhatsApp / Phone</h3>
+  <p>+971 56 884 0769</p>
+</div>
+
+<div class="contact-card">
+  <h3>Email</h3>
+  <p>primepepperglobal@gmail.com</p>
+</div>
+
+<div class="contact-card">
+  <h3>Website</h3>
+  <p>sudeshmadushanka-blip.github.io/primepepper-global/</p>
+</div>
+
+  </div>
+</section><footer>
+  <p>
+    © 2026 PrimePepper Global (Pvt) Ltd • Sri Lanka • PURE · ORGANIC · PREMIUM
+  </p>
+</footer><a class="whatsapp" href="https://wa.me/971568840769">
+  WhatsApp Us
+</a></body>
+</html>
