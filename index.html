@@ -5,452 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrimePepper Global | Organic Black Pepper Essential Oil</title>
     <style>
-        /* ========================================
-           RESET & GLOBAL STYLES
-        ======================================== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            background-color: #f9fafb;
-            color: #1f2937;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ========================================
-           TYPOGRAPHY
-        ======================================== */
-        h1, h2, h3 {
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            letter-spacing: -0.025em;
-        }
-
-        h2 {
-            font-size: 1.875rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid #2b7a4b;
-            padding-left: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            h1 {
-                font-size: 3rem;
-            }
-            h2 {
-                font-size: 2.25rem;
-            }
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: #dcfce7;
-            color: #166534;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            margin-bottom: 1rem;
-        }
-
-        /* ========================================
-           BUTTONS
-        ======================================== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            border: none;
-            margin-right: 0.75rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .btn-primary {
-            background-color: #2b7a4b;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: #225f3a;
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background-color: white;
-            border: 1px solid #d1d5db;
-            color: #374151;
-        }
-
-        .btn-secondary:hover {
-            background-color: #f3f4f6;
-        }
-
-        /* ========================================
-           HEADER & NAVIGATION
-        ======================================== */
-        .navbar {
-            background-color: white;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo h1 {
-            font-size: 1.5rem;
-            margin-bottom: 0;
-            color: #1f2937;
-        }
-
-        .logo span {
-            color: #2b7a4b;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #4b5563;
-            margin-left: 1.5rem;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #2b7a4b;
-        }
-
-        /* ========================================
-           HERO SECTION
-        ======================================== */
-        .hero {
-            padding: 4rem 0;
-            background: linear-gradient(to bottom, #ffffff, #f9fafb);
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        @media (min-width: 768px) {
-            .hero-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .hero-title {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-        }
-
-        .hero-buttons {
-            margin-top: 1.5rem;
-        }
-
-        .hero-image {
-            text-align: center;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 1rem;
-        }
-
-        /* ========================================
-           CERTIFICATIONS SECTION
-        ======================================== */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .cert-card {
-            background-color: white;
-            border-radius: 0.75rem;
-            padding: 1rem;
-            text-align: center;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        /* ========================================
-           DOCUMENTS SECTION
-        ======================================== */
-        .doc-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .doc-card {
-            background-color: white;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .doc-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        .doc-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        /* ========================================
-           FOOTER
-        ======================================== */
-        .footer {
-            background-color: #1f2937;
-            color: #9ca3af;
-            padding: 3rem 0;
-            margin-top: 4rem;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #9ca3af;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: white;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f9fafb; color: #1f2937; line-height: 1.6; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        h1, h2, h3 { font-weight: 700; margin-bottom: 1rem; }
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 1.875rem; border-left: 4px solid #2b7a4b; padding-left: 1rem; margin-bottom: 1.5rem; }
+        .badge { display: inline-block; background: #dcfce7; color: #166534; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 9999px; margin-bottom: 1rem; }
+        .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: 0.2s; margin-right: 0.75rem; margin-bottom: 0.75rem; cursor: pointer; }
+        .btn-primary { background-color: #2b7a4b; color: white; border: none; }
+        .btn-primary:hover { background-color: #225f3a; transform: translateY(-1px); }
+        .btn-secondary { background-color: white; border: 1px solid #d1d5db; color: #374151; }
+        .btn-secondary:hover { background-color: #f3f4f6; }
+        .navbar { background: white; border-bottom: 1px solid #e5e7eb; padding: 1rem 0; position: sticky; top: 0; z-index: 10; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo h1 { font-size: 1.5rem; margin-bottom: 0; }
+        .logo span { color: #2b7a4b; }
+        .nav-links a { text-decoration: none; color: #4b5563; margin-left: 1.5rem; transition: 0.2s; }
+        .nav-links a:hover { color: #2b7a4b; }
+        .hero { padding: 4rem 0; background: linear-gradient(to bottom, #fff, #f9fafb); }
+        .hero-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
+        @media (min-width: 768px) { .hero-grid { grid-template-columns: 1fr 1fr; } }
+        .hero-image img { max-width: 100%; border-radius: 1rem; margin-bottom: 1rem; }
+        .doc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .doc-card { background: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: 0.2s; }
+        .doc-card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        .doc-icon { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 2rem; }
+        .cert-card { background: #f9fafb; border-radius: 0.5rem; padding: 1rem; text-align: center; }
+        .footer { background: #1f2937; color: #9ca3af; padding: 3rem 0; margin-top: 4rem; text-align: center; }
+        .footer a { color: #9ca3af; text-decoration: none; }
+        .footer a:hover { color: white; }
+        @media (max-width: 768px) { h1 { font-size: 1.8rem; } }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <h1>PrimePepper <span>Global</span></h1>
-            </div>
-            <div class="nav-links">
-                <a href="#product">Product</a>
-                <a href="#documents">Documents</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container hero-grid">
-                <div>
-                    <div class="badge">100% Organic · Steam Distilled · Sri Lanka</div>
-                    <h1 class="hero-title">Premium Quality<br> Black Pepper Essential Oil</h1>
-                    <p style="font-size: 1.125rem; color: #4b5563; margin-bottom: 1rem;">
-                        Sourced from Sri Lanka's finest farms (Welimada / Peradeniya). High piperine content, chemical-free, and sustainably produced.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#documents" class="btn btn-primary">📄 Download Product Sheet</a>
-                        <a href="#contact" class="btn btn-secondary">📞 Contact Us</a>
-                    </div>
-                </div>
-           <div class="hero-image">
-  <img src="My%20final%20logo.png" alt="PrimePepper Global Logo" style="max-width: 80%; margin-bottom: 1rem;">
-  <img src="my%20bottle%201.jpg" alt="Product Bottle" style="max-width: 100%; margin-top: 1rem;">
-</div> 
-        </section>
-
-        <!-- USP Section -->
-        <section style="padding: 3rem 0; background-color: white;" id="product">
-            <div class="container">
-                <h2>Why Choose PrimePepper Global?</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <div>
-                        <h3>🌿 Pure & Natural</h3>
-                        <p>100% pure, no additives, no chemicals. Only the finest organic peppercorns from Sri Lanka.</p>
-                    </div>
-                    <div>
-                        <h3>⚗️ High Piperine Content</h3>
-                        <p>Superior therapeutic quality, verified by GC-MS analysis (ITI, Sri Lanka).</p>
-                    </div>
-                    <div>
-                        <h3>🏆 Farm-to-Vial Traceability</h3>
-                        <p>Personally sourced from Welimada & Peradeniya, Sri Lanka's Black Pepper Belt.</p>
-                    </div>
-                    <div>
-                        <h3>📜 Full Documentation</h3>
-                        <p>COO, Phytosanitary, MSDS, Chemical Analysis, and Sample Agreement provided.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Documents Download Section -->
-<!-- Documents Download Section -->
-<section id="documents" style="padding: 3rem 0; background-color: #f9fafb;">
-    <div class="container">
-        <h2>📂 Official Documents</h2>
-        <p>Download our complete product profile, price list, sample agreement, and invoice for your review.</p>
-        <div class="doc-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
-            
-            <!-- Product Info Sheet -->
-            <div class="doc-card" style="background-color: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                <span class="doc-icon" style="font-size: 2rem;">📄</span>
-                <h3>Product Info Sheet</h3>
-                <p>Full specifications, applications, and pricing.</p>
-                <a href="PPG_Product_Information_Sheet_v2-1.pdf" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Download PDF</a>
-            </div>
-
-            <!-- Short Product Sheet -->
-            <div class="doc-card" style="background-color: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                <span class="doc-icon" style="font-size: 2rem;">📄</span>
-                <h3>Short Product Sheet</h3>
-                <p>One-page summary for quick evaluation.</p>
-                <a href="PPG_Product_Sheet_Short_v2.pdf" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Download PDF</a>
-            </div>
-
-            <!-- Price List -->
-            <div class="doc-card" style="background-color: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                <span class="doc-icon" style="font-size: 2rem;">💰</span>
-                <h3>Price List</h3>
-                <p>FOB Colombo / CIF Dubai pricing, bulk discounts.</p>
-                <a href="PPG_Price_List_2026.pdf" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Download PDF</a>
-            </div>
-
-            <!-- Sample Agreement -->
-            <div class="doc-card" style="background-color: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                <span class="doc-icon" style="font-size: 2rem;">⚖️</span>
-                <h3>Sample Agreement</h3>
-                <p>Legal terms for sample evaluation.</p>
-                <a href="PPG_Sample_Agreement_v3.pdf" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Download PDF</a>
-            </div>
-
-            <!-- Commercial Invoice -->
-            <div class="doc-card" style="background-color: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                <span class="doc-icon" style="font-size: 2rem;">🧾</span>
-                <h3>Commercial Invoice</h3>
-                <p>Proforma invoice template.</p>
-                <a href="PPG_Commercial_Invoice.docx" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Download DOCX</a>
-            </div>
-
-        </div>
-        <p style="text-align: center; margin-top: 2rem;">Click on any button above to download.</p>
-    </div>
-</section>
-
-<!-- Certifications Section -->
-<section style="padding: 3rem 0; background-color: white;">
-    <div class="container">
-        <h2>📜 Certifications & Compliance</h2>
-        <div class="cert-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 2rem;">
-            <div class="cert-card" style="background-color: #f9fafb; border-radius: 0.5rem; padding: 1rem; text-align: center;">VTA Certified Entrepreneur</div>
-            <div class="cert-card" style="background-color: #f9fafb; border-radius: 0.5rem; padding: 1rem; text-align: center;">NVQ Level 3 (F&B Service)</div>
-            <div class="cert-card" style="background-color: #f9fafb; border-radius: 0.5rem; padding: 1rem; text-align: center;">EDB Export Registration</div>
-            <div class="cert-card" style="background-color: #f9fafb; border-radius: 0.5rem; padding: 1rem; text-align: center;">MSDS | COO | Phytosanitary</div>
+<nav class="navbar">
+    <div class="container nav-container">
+        <div class="logo"><h1>PrimePepper <span>Global</span></h1></div>
+        <div class="nav-links">
+            <a href="#product">Product</a>
+            <a href="#documents">Documents</a>
+            <a href="#contact">Contact</a>
         </div>
     </div>
-</section>
-            <!-- Commercial Invoice -->
-            <div class="doc-card" style="background-color: white; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                <span class="doc-icon" style="font-size: 2rem;">🧾</span>
-                <h3>Commercial Invoice</h3>
-                <p>Proforma invoice template.</p>
-                <a href="PPG_Commercial_Invoice.docx" target="_blank" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Download DOCX</a>
-            </div>
+</nav>
 
+<main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="badge">100% Organic · Steam Distilled · Sri Lanka</div>
+                <h1>Premium Quality Black Pepper Essential Oil</h1>
+                <p style="font-size: 1.125rem; color: #4b5563;">Sourced from Sri Lanka's finest farms (Welimada / Peradeniya). High piperine content, chemical-free, and sustainably produced.</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="PPG_Product_Information_Sheet_v2-1.pdf" class="btn btn-primary">📄 Download Product Sheet</a>
+                    <a href="https://linktr.ee/primepepperglobal" class="btn btn-secondary">📞 Contact Us</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="My%20final%20logo.png" alt="PrimePepper Global Logo" style="max-width: 80%; margin-bottom: 1rem;">
+                <img src="my%20bottle%201.jpg" alt="Organic Black Pepper Essential Oil Bottle" style="max-width: 100%;">
+            </div>
         </div>
-        <p style="text-align: center; margin-top: 2rem;">Click on any button above to download.</p>
-    </div>
-</section>
+    </section>
 
-<!-- Certifications Section -->
-<section style="padding: 3rem 0; background-color: white;">
-    <div class="container">
-        <h2>📜 Certifications & Compliance</h2>
-        <div class="cert-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 2rem;">
-            <div class="cert-card" style="background-color: #f9fafb; border-radius: 0.5rem; padding: 1rem; text-align: center;">VTA Certified Entrepreneur</div>
-            <div class="cert-card" style="background-color: #f9fafb; border-radius: 0.5rem; padding: 1rem; text-align: center;">NVQ Level 3 (F&B Service)</div>
-            <div class="cert-card" style="background-color: #f9fafb; border-radius: 0.5rem; padding: 1rem; text-align: center;">EDB Export Registration</div>
-            <div class="cert-card" style="background-color: #f9fafb; border-radius: 0.5rem; padding: 1rem; text-align: center;">MSDS | COO | Phytosanitary</div>
-        </div>
-    </div>
-</section>
-        </section>
-
-        <!-- Certifications Section -->
-        <section style="padding: 3rem 0; background-color: white;">
-            <div class="container">
-                <h2>📜 Certifications & Compliance</h2>
-                <div class="cert-grid">
-                    <div class="cert-card">VTA Certified Entrepreneur</div>
-                    <div class="cert-card">NVQ Level 3 (F&B Service)</div>
-                    <div class="cert-card">EDB Export Registration</div>
-                    <div class="cert-card">MSDS | COO | Phytosanitary</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" style="padding: 3rem 0; background-color: #f3f4f6;">
-            <div class="container" style="text-align: center;">
-                <h2>📞 Get in Touch</h2>
-                <div style="margin-bottom: 2rem;">
-                    <a href="https://linktr.ee/primepepperglobal" class="btn btn-primary">🔗 Linktree (All Links)</a>
-                    <a href="https://wa.me/971568840769" class="btn btn-secondary">💬 WhatsApp</a>
-                    <a href="mailto:primepepperglobal@gmail.com" class="btn btn-secondary">✉️ Email</a>
-                    <a href="https://www.linkedin.com/in/sudesh-madushanka/" class="btn btn-secondary">🔗 LinkedIn</a>
-                </div>
-                <div>
-                    <p style="color: #4b5563;">S.M. Sudesh Madushanka Samarakoon</p>
-                    <p style="color: #4b5563;">Angunawala, Peradeniya, Kandy, Sri Lanka</p>
-                    <p style="color: #4b5563;">+971 56 884 0769</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
+    <section id="product" style="padding: 3rem 0; background: white;">
         <div class="container">
-            <p>&copy; 2026 PrimePepper Global (Pvt) Ltd | PURE · ORGANIC · PREMIUM</p>
-            <p style="margin-top: 1rem;">🌿 From Sri Lanka's Black Pepper Belt to the World.</p>
+            <h2>Why Choose PrimePepper Global?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div><h3>🌿 Pure & Natural</h3><p>100% pure, no additives, no chemicals. Only the finest organic peppercorns from Sri Lanka.</p></div>
+                <div><h3>⚗️ High Piperine Content</h3><p>Superior therapeutic quality, verified by GC-MS analysis (ITI, Sri Lanka).</p></div>
+                <div><h3>🏆 Farm-to-Vial Traceability</h3><p>Personally sourced from Welimada & Peradeniya, Sri Lanka's Black Pepper Belt.</p></div>
+                <div><h3>📜 Full Documentation</h3><p>COO, Phytosanitary, MSDS, Chemical Analysis, and Sample Agreement provided.</p></div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <section id="documents" style="padding: 3rem 0; background-color: #f9fafb;">
+        <div class="container">
+            <h2>📂 Official Documents</h2>
+            <p>Download our complete product profile, price list, sample agreement, and invoice for your review.</p>
+            <div class="doc-grid">
+                <div class="doc-card"><span class="doc-icon">📄</span><h3>Product Info Sheet</h3><p>Full specifications, applications, and pricing.</p><a href="PPG_Product_Information_Sheet_v2-1.pdf" target="_blank" class="btn btn-secondary" style="margin-top:1rem;">Download PDF</a></div>
+                <div class="doc-card"><span class="doc-icon">📄</span><h3>Short Product Sheet</h3><p>One-page summary for quick evaluation.</p><a href="PPG_Product_Sheet_Short_v2.pdf" target="_blank" class="btn btn-secondary" style="margin-top:1rem;">Download PDF</a></div>
+                <div class="doc-card"><span class="doc-icon">💰</span><h3>Price List</h3><p>FOB Colombo / CIF Dubai pricing, bulk discounts.</p><a href="PPG_Price_List_2026.pdf" target="_blank" class="btn btn-secondary" style="margin-top:1rem;">Download PDF</a></div>
+                <div class="doc-card"><span class="doc-icon">⚖️</span><h3>Sample Agreement</h3><p>Legal terms for sample evaluation.</p><a href="PPG_Sample_Agreement_v3.pdf" target="_blank" class="btn btn-secondary" style="margin-top:1rem;">Download PDF</a></div>
+                <div class="doc-card"><span class="doc-icon">🧾</span><h3>Commercial Invoice</h3><p>Proforma invoice template.</p><a href="PPG_Commercial_Invoice.docx" target="_blank" class="btn btn-secondary" style="margin-top:1rem;">Download DOCX</a></div>
+            </div>
+            <p style="text-align:center; margin-top:2rem;">Click any button to download.</p>
+        </div>
+    </section>
+
+    <section style="padding: 3rem 0; background: white;">
+        <div class="container">
+            <h2>📜 Certifications & Compliance</h2>
+            <div class="cert-grid">
+                <div class="cert-card">VTA Certified Entrepreneur</div>
+                <div class="cert-card">NVQ Level 3 (F&B Service)</div>
+                <div class="cert-card">EDB Export Registration</div>
+                <div class="cert-card">MSDS | COO | Phytosanitary</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="padding: 3rem 0; background-color: #f3f4f6; text-align: center;">
+        <div class="container">
+            <h2>📞 Get in Touch</h2>
+            <div style="margin-bottom: 2rem;">
+                <a href="https://linktr.ee/primepepperglobal" class="btn btn-primary">🔗 All Links (Linktree)</a>
+                <a href="https://wa.me/971568840769" class="btn btn-secondary">💬 WhatsApp</a>
+                <a href="mailto:primepepperglobal@gmail.com" class="btn btn-secondary">✉️ Email</a>
+                <a href="https://www.linkedin.com/in/sudesh-madushanka/" class="btn btn-secondary">🔗 LinkedIn</a>
+            </div>
+            <p>S.M. Sudesh Madushanka Samarakoon</p>
+            <p>Angunawala, Peradeniya, Kandy, Sri Lanka</p>
+            <p>+971 56 884 0769</p>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 PrimePepper Global (Pvt) Ltd | PURE · ORGANIC · PREMIUM</p>
+        <p style="margin-top:1rem;">🌿 From Sri Lanka's Black Pepper Belt to the World.</p>
+    </div>
+</footer>
 
 </body>
-</html>
+</html> 
