@@ -1,112 +1,541 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrimePepper Global Arabic</title>
-
+<title>PrimePepper Global — زيت الفلفل الأسود العضوي</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 <style>
-body{
-font-family: Arial, sans-serif;
-background:#f8f8f8;
-margin:0;
-padding:0;
-text-align:center;
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-.header{
-background:#1B4332;
-color:white;
-padding:40px 20px;
-}
+  :root {
+    --dark:   #1B4332;
+    --mid:    #2D6A4F;
+    --light:  #40916C;
+    --accent: #D4AC0D;
+    --cream:  #F8F5EE;
+    --white:  #FFFFFF;
+    --text:   #1a1a1a;
+    --muted:  #5a5a5a;
+    --border: #C8DFA8;
+  }
 
-.content{
-padding:30px;
-max-width:800px;
-margin:auto;
-}
+  html { scroll-behavior: smooth; }
 
-.btn{
-display:inline-block;
-background:#2D6A4F;
-color:white;
-padding:12px 24px;
-text-decoration:none;
-border-radius:8px;
-margin-top:20px;
-}
+  body {
+    font-family: 'Tajawal', Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.8;
+  }
 
-.footer{
-background:#1B4332;
-color:white;
-padding:20px;
-margin-top:40px;
-}
+  /* ── NAV ── */
+  nav {
+    background: var(--dark);
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { width: 44px; height: 44px; border-radius: 50%; }
+  .nav-logo span { color: var(--white); font-size: 17px; font-weight: 700; letter-spacing: 0.5px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { color: #c8dfa8; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--dark) 0%, #0D2818 100%);
+    padding: 90px 32px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(212,172,13,0.15);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 5px 18px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  .hero-logo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    margin: 0 auto 28px;
+    display: block;
+    object-fit: contain;
+    background: #c8dfa8;
+    padding: 6px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 6vw, 54px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p.sub {
+    font-size: 18px;
+    color: #a8d5b5;
+    max-width: 560px;
+    margin: 0 auto 36px;
+    font-weight: 300;
+  }
+  .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent);
+    color: #1a1a00;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212,172,13,0.35); }
+  .btn-outline {
+    border: 2px solid #a8d5b5;
+    color: #a8d5b5;
+    padding: 13px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,0.08); color: #fff; border-color: #fff; }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--mid);
+    padding: 28px 32px;
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; color: white; }
+  .stat .num { font-size: 28px; font-weight: 800; color: var(--accent); display: block; }
+  .stat .lbl { font-size: 13px; color: #c8dfa8; font-weight: 400; }
+
+  /* ── SECTIONS ── */
+  .section { padding: 72px 24px; max-width: 1000px; margin: 0 auto; }
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--light);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 4px;
+    margin-bottom: 14px;
+  }
+  .section h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 14px;
+    line-height: 1.25;
+  }
+  .section .lead {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 640px;
+    margin-bottom: 48px;
+    font-weight: 400;
+  }
+
+  /* ── PRODUCT CARD ── */
+  .product-showcase {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .product-image {
+    background: linear-gradient(160deg, #e8f5e0, #c8dfa8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    min-height: 320px;
+  }
+  .product-image img { max-width: 100%; max-height: 280px; object-fit: contain; border-radius: 12px; }
+  .product-info { padding: 40px 36px; }
+  .product-info h3 { font-size: 22px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+  .product-info .origin { font-size: 13px; color: var(--light); font-weight: 600; margin-bottom: 20px; letter-spacing: 1px; }
+  .spec-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+  .spec-row:last-child { border-bottom: none; }
+  .spec-row .key { color: var(--muted); }
+  .spec-row .val { font-weight: 700; color: var(--dark); }
+
+  /* ── FEATURES GRID ── */
+  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+  .feature-card {
+    background: white;
+    border-radius: 14px;
+    padding: 28px 22px;
+    border: 1px solid #eee;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+  }
+  .feature-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(45,106,79,0.12); }
+  .feature-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, #e8f5e0, #c8dfa8);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 16px;
+  }
+  .feature-card h4 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+  .feature-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* ── USES GRID ── */
+  .uses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .use-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px 20px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    border: 1px solid #eee;
+  }
+  .use-num {
+    width: 36px; height: 36px;
+    background: var(--dark);
+    color: var(--accent);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 13px;
+    flex-shrink: 0;
+  }
+  .use-card h4 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+  .use-card p { font-size: 13px; color: var(--muted); }
+
+  /* ── PRICING ── */
+  .pricing-bg { background: var(--dark); padding: 72px 24px; }
+  .pricing-inner { max-width: 1000px; margin: 0 auto; }
+  .pricing-bg .section-tag { color: var(--accent); }
+  .pricing-bg h2 { color: white; }
+  .pricing-bg .lead { color: #a8d5b5; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .price-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(200,223,168,0.25);
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: background 0.2s;
+  }
+  .price-card:hover { background: rgba(255,255,255,0.12); }
+  .price-card.featured {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .price-card.featured .size,
+  .price-card.featured .price,
+  .price-card.featured .note { color: #1a1a00; }
+  .price-card .size { font-size: 14px; color: #a8d5b5; font-weight: 600; margin-bottom: 10px; }
+  .price-card .price { font-size: 26px; font-weight: 800; color: white; margin-bottom: 6px; }
+  .price-card .note { font-size: 12px; color: #7ab89a; }
+
+  /* ── CONTACT ── */
+  .contact-section { background: white; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .contact-info h3 { font-size: 22px; font-weight: 800; color: var(--dark); margin-bottom: 24px; }
+  .contact-row { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .contact-icon {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, #e8f5e0, #c8dfa8);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .contact-row .detail { font-size: 14px; }
+  .contact-row .detail .label { color: var(--muted); font-size: 12px; }
+  .contact-row .detail a { color: var(--dark); font-weight: 700; text-decoration: none; }
+  .contact-row .detail a:hover { color: var(--light); }
+  .contact-map-area {
+    background: linear-gradient(160deg, #e8f5e0, #c8dfa8);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+  }
+  .contact-map-area .flag { font-size: 56px; margin-bottom: 12px; }
+  .contact-map-area h4 { font-size: 18px; font-weight: 800; color: var(--dark); }
+  .contact-map-area p { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0D2818;
+    padding: 40px 32px 24px;
+    text-align: center;
+  }
+  footer .footer-brand { color: white; font-size: 18px; font-weight: 800; margin-bottom: 6px; }
+  footer .footer-tag { color: var(--accent); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
+  footer .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
+  footer .footer-links a { color: #7ab89a; font-size: 13px; text-decoration: none; }
+  footer .footer-links a:hover { color: var(--accent); }
+  footer .copy { color: #4a7a5a; font-size: 12px; }
+
+  /* ── DIVIDER ── */
+  .divider { border: none; border-top: 1px solid #e0ead0; margin: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    nav { padding: 12px 16px; }
+    .nav-links { display: none; }
+    .hero { padding: 60px 20px 50px; }
+    .stats-bar { gap: 24px; }
+    .product-showcase { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .section { padding: 48px 16px; }
+  }
 </style>
-
 </head>
-
 <body>
 
-<div class="header">
-  <img src="logo_png.png" alt="PrimePepper Global Logo" width="120">
-<h1>PrimePepper Global</h1>
-<h2>زيت الفلفل الأسود العضوي</h2>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="logo_png.png" alt="شعار PrimePepper Global">
+    <span>PrimePepper Global</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#product">المنتج</a></li>
+    <li><a href="#uses">الاستخدامات</a></li>
+    <li><a href="#pricing">الأسعار</a></li>
+    <li><a href="#contact">التواصل</a></li>
+    <li><a href="index.html">English</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">🌿 نقي · عضوي · فاخر</div>
+  <img class="hero-logo" src="logo_png.png" alt="PPG Logo">
+  <h1>زيت الفلفل الأسود<br><span>العضوي الفاخر</span></h1>
+  <p class="sub">من قلب سريلانكا إلى أسواق العالم — مُقطَّر بالبخار، 100% طبيعي، بجودة لا تُضاهى</p>
+  <div class="hero-ctas">
+    <a href="https://wa.me/971568840769" class="btn-primary">📲 تواصل عبر واتساب</a>
+    <a href="mailto:primepepperglobal@gmail.com" class="btn-outline">✉ راسلنا الآن</a>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat"><span class="num">100%</span><span class="lbl">عضوي طبيعي</span></div>
+  <div class="stat"><span class="num">3</span><span class="lbl">أحجام متاحة</span></div>
+  <div class="stat"><span class="num">≥35%</span><span class="lbl">نسبة البيبيرين</span></div>
+  <div class="stat"><span class="num">14</span><span class="lbl">يوم ضمان الجودة</span></div>
 </div>
 
-<div class="content">
+<!-- PRODUCT SECTION -->
+<div id="product">
+<div class="section">
+  <span class="section-tag">منتجنا</span>
+  <h2>زيت الفلفل الأسود العضوي</h2>
+  <p class="lead">مستخلص بتقطير البخار من حبوب الفلفل السريلانكية العضوية المختارة — نقي، فعّال، ذو رائحة دافئة وبهارية أصيلة.</p>
 
-<h3>مرحباً بكم</h3>
-
-<p>
-نحن في PrimePepper Global متخصصون في إنتاج وتصدير
-زيت الفلفل الأسود العضوي عالي الجودة من سريلانكا.
-</p>
-
-<p>
-✔ جودة عالية<br>
-✔ مصدر مباشر من المزارع السريلانكية<br>
-✔ متوفر للطلبات بالجملة والعلامات التجارية الخاصة
-</p>
-
-<a class="btn" href="https://wa.me/971568840769">
-تواصل عبر واتساب
-</a>
-<br><br>
-<a class="btn" href="https://wa.me/971568840769">
-تواصل عبر واتساب
-</a>
-
-<hr style="margin:40px 0;">
-
-<h2>منتجاتنا</h2>
-
-<p>
-زيت الفلفل الأسود العضوي 100٪
-</p>
-
-<ul style="list-style:none; padding:0;">
-<li>✔ نقي وطبيعي</li>
-<li>✔ مستخرج بالبخار</li>
-<li>✔ جودة عالية</li>
-<li>✔ متوفر للطلبات بالجملة</li>
-<li>✔ خدمات العلامة التجارية الخاصة</li>
-</ul>
-<a class="btn" href="index.html">
-English Website
-</a>
-<br><br>
-
-<p>
-📧 primepepperglobal@gmail.com
-</p>
-
+  <div class="product-showcase">
+    <div class="product-image">
+      <img src="my_bottle.jpg" alt="زجاجات زيت الفلفل الأسود — PPG">
+    </div>
+    <div class="product-info">
+      <h3>Piper nigrum — الفلفل الأسود</h3>
+      <p class="origin">🇱🇰 سريلانكا (سيلان) · EST. 2025</p>
+      <div class="spec-row"><span class="key">طريقة الاستخلاص</span><span class="val">تقطير البخار</span></div>
+      <div class="spec-row"><span class="key">المادة الخام</span><span class="val">حبوب فلفل مجففة</span></div>
+      <div class="spec-row"><span class="key">المظهر</span><span class="val">سائل أصفر-أخضر صافٍ</span></div>
+      <div class="spec-row"><span class="key">الكثافة (20°م)</span><span class="val">0.864 – 0.884</span></div>
+      <div class="spec-row"><span class="key">نسبة البيبيرين</span><span class="val">≥ 35%</span></div>
+      <div class="spec-row"><span class="key">التعبئة</span><span class="val">10 مل · 30 مل · 100 مل · 1 كغ</span></div>
+    </div>
+  </div>
+</div>
 </div>
 
-<div class="footer">
-PrimePepper Global © 2026
+<hr class="divider">
+
+<!-- FEATURES -->
+<div class="section">
+  <span class="section-tag">مميزاتنا</span>
+  <h2>لماذا تختار PrimePepper Global؟</h2>
+  <p class="lead">نجمع بين الجودة السريلانكية الأصيلة وأعلى معايير الإنتاج لنقدم لك منتجاً استثنائياً.</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🌿</div>
+      <h4>عضوي 100%</h4>
+      <p>خالٍ تماماً من المواد الكيميائية والمبيدات</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔬</div>
+      <h4>مختبر ومُعتمد</h4>
+      <p>كل دفعة تُختبر بواسطة معهد التكنولوجيا الصناعية</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏷️</div>
+      <h4>علامة تجارية خاصة</h4>
+      <p>نوفر خدمات التعبئة والتغليف بعلامتك التجارية</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🤝</div>
+      <h4>شراكة طويلة الأمد</h4>
+      <p>نبني علاقات تجارية مستدامة مع موزعينا</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛡️</div>
+      <h4>ضمان الجودة</h4>
+      <p>استبدال أو استرداد كامل خلال 14 يوماً</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌍</div>
+      <h4>خبرة الشرق الأوسط</h4>
+      <p>فهم عميق لمتطلبات السوق الخليجي والعربي</p>
+    </div>
+  </div>
 </div>
+
+<hr class="divider">
+
+<!-- USES -->
+<div id="uses">
+<div class="section">
+  <span class="section-tag">الاستخدامات</span>
+  <h2>مجالات التطبيق المتعددة</h2>
+  <p class="lead">زيت الفلفل الأسود العضوي لدينا يخدم قطاعات صناعية متنوعة حول العالم.</p>
+  <div class="uses-grid">
+    <div class="use-card"><div class="use-num">01</div><div><h4>العلاج العطري</h4><p>ناشرات الروائح، أجهزة الاستنشاق، وعلاجات الاسترخاء</p></div></div>
+    <div class="use-card"><div class="use-num">02</div><div><h4>مستحضرات التجميل</h4><p>كريمات العضلات، زيوت التدليك، والعناية بالبشرة</p></div></div>
+    <div class="use-card"><div class="use-num">03</div><div><h4>صناعة العطور</h4><p>نوتات قاعدية للعطور الفاخرة وتركيبات الروائح</p></div></div>
+    <div class="use-card"><div class="use-num">04</div><div><h4>الأغذية والمشروبات</h4><p>نكهات طبيعية للمنتجات الغذائية الراقية</p></div></div>
+    <div class="use-card"><div class="use-num">05</div><div><h4>المستحضرات الدوائية</h4><p>مكملات غذائية ومنتجات تخفيف الآلام</p></div></div>
+    <div class="use-card"><div class="use-num">06</div><div><h4>طب الأيورفيدا</h4><p>تركيبات الطب التقليدي والعلاجات الطبيعية</p></div></div>
+  </div>
+</div>
+</div>
+
+<!-- PRICING -->
+<div id="pricing">
+<div class="pricing-bg">
+  <div class="pricing-inner">
+    <span class="section-tag">الأسعار التقديرية</span>
+    <h2 style="color:white; margin-bottom:10px;">شفافية الأسعار</h2>
+    <p class="lead">أسعار مرنة تناسب جميع الاحتياجات — من العينات إلى طلبات الجملة الكبيرة</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="size">10 مل — عينة</div>
+        <div class="price">15–20 USD</div>
+        <div class="note">مناسب للتقييم الأولي</div>
+      </div>
+      <div class="price-card featured">
+        <div class="size">30 مل — قياسي</div>
+        <div class="price">35–55 USD</div>
+        <div class="note">الأكثر طلباً</div>
+      </div>
+      <div class="price-card">
+        <div class="size">100 مل — احترافي</div>
+        <div class="price">90–140 USD</div>
+        <div class="note">للصالونات والمهنيين</div>
+      </div>
+      <div class="price-card">
+        <div class="size">1 كغ — جملة</div>
+        <div class="price">200–400 USD</div>
+        <div class="note">للموزعين والمصدّرين</div>
+      </div>
+    </div>
+    <p style="color:#7ab89a; font-size:13px; margin-top:20px; text-align:center;">* الأسعار تقديرية وتخضع للكميات وظروف السوق. للاستفسار تواصل معنا مباشرة.</p>
+  </div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact">
+<div class="section contact-section" style="max-width:100%; padding: 72px 24px; background:white;">
+  <div style="max-width:1000px; margin:0 auto;">
+    <span class="section-tag">تواصل معنا</span>
+    <h2>نبدأ شراكتنا اليوم</h2>
+    <p class="lead">فريقنا جاهز للرد على استفساراتكم خلال 24–48 ساعة</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>بيانات التواصل</h3>
+        <div class="contact-row">
+          <div class="contact-icon">📞</div>
+          <div class="detail"><div class="label">هاتف / واتساب</div><a href="tel:+971568840769">+971 56 884 0769</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">✉️</div>
+          <div class="detail"><div class="label">البريد الإلكتروني</div><a href="mailto:primepepperglobal@gmail.com">primepepperglobal@gmail.com</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">💼</div>
+          <div class="detail"><div class="label">لينكدإن</div><a href="https://linkedin.com/in/sudesh-madushanka" target="_blank">linkedin.com/in/sudesh-madushanka</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">🌐</div>
+          <div class="detail"><div class="label">الموقع الإلكتروني</div><a href="https://sudeshmadushanka-blip.github.io/primepepper-global/" target="_blank">primepepper-global</a></div>
+        </div>
+        <div style="margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="https://wa.me/971568840769" class="btn-primary" style="font-size:14px; padding:12px 24px;">📲 واتساب</a>
+          <a href="index.html" class="btn-outline" style="font-size:14px; padding:11px 20px; border-color:#2D6A4F; color:#2D6A4F;">🌐 English</a>
+        </div>
+      </div>
+      <div class="contact-map-area">
+        <div class="flag">🇱🇰</div>
+        <h4>S.M. Sudesh Madushanka</h4>
+        <p>المؤسس والمدير التنفيذي<br>PrimePepper Global (Pvt) Ltd</p>
+        <p style="margin-top:14px; font-size:12px; color:#40916C;">Angunawala, Peradeniya<br>Kandy, Sri Lanka</p>
+        <p style="margin-top:16px; font-size:12px; border-top:1px solid #c8dfa8; padding-top:14px; color:#5a5a5a;">خبرة 19+ سنة في الإدارة · معرفة مباشرة بأسواق الخليج</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">PrimePepper Global (Pvt) Ltd</div>
+  <div class="footer-tag">Pure · Organic · Premium · Sri Lanka</div>
+  <div class="footer-links">
+    <a href="#product">المنتج</a>
+    <a href="#uses">الاستخدامات</a>
+    <a href="#pricing">الأسعار</a>
+    <a href="#contact">التواصل</a>
+    <a href="index.html">English</a>
+  </div>
+  <div class="copy">© 2026 PrimePepper Global (Pvt) Ltd — جميع الحقوق محفوظة</div>
+</footer>
 
 </body>
 </html>
